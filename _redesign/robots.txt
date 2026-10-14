@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://rensheng.21212121.xyz/sitemap.xml
