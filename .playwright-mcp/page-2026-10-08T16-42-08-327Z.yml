@@ -1,0 +1,756 @@
+- generic [ref=f1e2]:
+  - link "Skip to main content" [ref=f1e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f1e4]:
+    - generic [ref=f1e5]:
+      - link [ref=f1e6] [cursor=pointer]:
+        - /url: /
+        - img "Claude" [ref=f1e7]
+      - button "Toggle menu" [ref=f1e11] [cursor=pointer]
+    - navigation "Breadcrumb" [ref=f1e15]:
+      - generic [ref=f1e16]:
+        - list [ref=f1e17]:
+          - listitem [ref=f1e18]:
+            - generic [ref=f1e19]: Claude Code
+        - button "Explore here" [ref=f1e23] [cursor=pointer]
+  - main [ref=f1e28]:
+    - generic [ref=f1e31]:
+      - heading "Claude Code" [level=1] [ref=f1e32]
+      - paragraph [ref=f1e33]: Hand Claude a bug fix, test, or multi-day migration. Steer and review from your terminal, IDE, Slack, or web.
+      - generic [ref=f1e34]:
+        - generic [ref=f1e35]:
+          - link [ref=f1e36] [cursor=pointer]:
+            - /url: https://claude.ai/api/desktop/darwin/universal/dmg/latest/redirect
+          - link "Read documentation (opens in new tab)" [ref=f1e40] [cursor=pointer]:
+            - /url: https://code.claude.com/docs/en/overview
+            - text: Read documentation
+            - generic [ref=f1e45]: (opens in new tab)
+        - paragraph [ref=f1e46]: Available for macOS, Linux, and Windows.
+      - generic [ref=f1e47]:
+        - paragraph [ref=f1e48]: "Other ways to use Claude Code:"
+        - list [ref=f1e49]:
+          - listitem [ref=f1e50]:
+            - link "Terminal (opens in new tab)" [ref=f1e51] [cursor=pointer]:
+              - /url: https://code.claude.com/docs/en/quickstart#step-1-install-claude-code
+              - generic [ref=f1e57]: Terminal
+              - generic [ref=f1e58]: (opens in new tab)
+          - listitem [ref=f1e59]:
+            - link "Web (opens in new tab)" [ref=f1e60] [cursor=pointer]:
+              - /url: https://claude.ai/code
+              - generic [ref=f1e69]: Web
+              - generic [ref=f1e70]: (opens in new tab)
+          - listitem [ref=f1e71]:
+            - link "iOS (opens in new tab)" [ref=f1e72] [cursor=pointer]:
+              - /url: https://apps.apple.com/us/app/claude-by-anthropic/id6473753684
+              - generic [ref=f1e76]: iOS
+              - generic [ref=f1e77]: (opens in new tab)
+          - listitem [ref=f1e78]:
+            - link "Android (opens in new tab)" [ref=f1e79] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.anthropic.claude
+              - generic [ref=f1e86]: Android
+              - generic [ref=f1e87]: (opens in new tab)
+          - listitem [ref=f1e88]:
+            - link "GitHub (opens in new tab)" [ref=f1e89] [cursor=pointer]:
+              - /url: https://code.claude.com/docs/en/github-actions
+              - generic [ref=f1e93]: GitHub
+              - generic [ref=f1e94]: (opens in new tab)
+          - listitem [ref=f1e95]:
+            - link "VS Code (opens in new tab)" [ref=f1e96] [cursor=pointer]:
+              - /url: https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code
+              - generic [ref=f1e108]: VS Code
+              - generic [ref=f1e109]: (opens in new tab)
+          - listitem [ref=f1e110]:
+            - link "JetBrains (opens in new tab)" [ref=f1e111] [cursor=pointer]:
+              - /url: https://plugins.jetbrains.com/plugin/27310-claude-code-beta-
+              - generic [ref=f1e117]: JetBrains
+              - generic [ref=f1e118]: (opens in new tab)
+          - listitem [ref=f1e119]:
+            - link "Slack (opens in new tab)" [ref=f1e120] [cursor=pointer]:
+              - /url: https://slack.com/oauth/v2/authorize?client_id=1601185624273.8899143856786&scope=app_mentions:read,assistant:write,channels:history,channels:read,chat:write,files:read,files:write,groups:history,groups:read,im:history,im:read,im:write,mpim:history,reactions:write,users:read,users:read.email,commands,search:read.public&user_scope=bookmarks:read,channels:history,channels:read,chat:write,emoji:read,files:read,groups:history,groups:read,groups:write,im:history,im:read,im:write,links:read,mpim:history,mpim:read,mpim:write,mpim:write.topic,pins:read,reactions:read,reactions:write,remote_files:read,team:read,users:read,users:read.email,search:read.public,search:read.private,search:read.im,search:read.mpim,search:read.files,search:read.users,canvases:read,canvases:write
+              - generic [ref=f1e131]: Slack
+              - generic [ref=f1e132]: (opens in new tab)
+    - list [ref=f1e136]:
+      - listitem [ref=f1e137]:
+        - img "Zapier" [ref=f1e140]
+      - listitem [ref=f1e141]:
+        - img "PagerDuty" [ref=f1e144]
+      - listitem [ref=f1e145]:
+        - img "Workato" [ref=f1e148]
+    - generic [ref=f1e151]:
+      - heading "Get started with Claude Code" [level=2] [ref=f1e154]
+      - tablist [ref=f1e157]:
+        - tab [selected] [ref=f1e158] [cursor=pointer]
+        - tab [ref=f1e162] [cursor=pointer]
+      - tabpanel "Individual" [ref=f1e166]:
+        - generic [ref=f1e167]:
+          - generic [ref=f1e168]:
+            - heading "Pro" [level=3] [ref=f1e170]
+            - paragraph [ref=f1e171]: Claude Code is included in your Pro plan. Perfect for short coding sprints in small codebases.
+          - generic [ref=f1e172]:
+            - generic [ref=f1e173]:
+              - generic [ref=f1e174]: $17
+              - paragraph [ref=f1e175]: Per month with annual subscription discount ($200 billed up front). $20 if billed monthly.
+            - link "Try Claude (opens in new tab)" [ref=f1e176] [cursor=pointer]:
+              - /url: https://claude.ai/login?plan=pro
+              - text: Try Claude
+              - generic [ref=f1e177]: (opens in new tab)
+        - generic [ref=f1e178]:
+          - generic [ref=f1e179]:
+            - heading "Max 5x" [level=3] [ref=f1e181]
+            - paragraph [ref=f1e182]: Claude Code is included in your Max plan. Great value for everyday use in larger codebases.
+          - generic [ref=f1e183]:
+            - generic [ref=f1e184]:
+              - generic [ref=f1e185]: $100
+              - paragraph [ref=f1e186]: Per month
+            - link "Try Claude (opens in new tab)" [ref=f1e187] [cursor=pointer]:
+              - /url: https://claude.ai/login?plan=max
+              - text: Try Claude
+              - generic [ref=f1e188]: (opens in new tab)
+        - generic [ref=f1e189]:
+          - generic [ref=f1e190]:
+            - heading "Max 20x" [level=3] [ref=f1e192]
+            - paragraph [ref=f1e193]: Even more Claude Code included in your Max plan. Great value for power users with the most access to Claude models.
+          - generic [ref=f1e194]:
+            - generic [ref=f1e195]:
+              - generic [ref=f1e196]: $200
+              - paragraph [ref=f1e197]: Per month
+            - link "Try Claude (opens in new tab)" [ref=f1e198] [cursor=pointer]:
+              - /url: https://claude.ai/login?plan=max
+              - text: Try Claude
+              - generic [ref=f1e199]: (opens in new tab)
+      - paragraph [ref=f1e201]:
+        - link "Usage limits apply" [ref=f1e202] [cursor=pointer]:
+          - /url: https://support.anthropic.com/en/articles/9797557-usage-limit-best-practices
+        - text: . Prices shown don't include applicable tax. Price and plans are subject to change at Anthropic's discretion.
+    - generic [ref=f1e205]:
+      - heading "Latest feature announcements" [level=2] [ref=f1e208]
+      - generic [ref=f1e209]:
+        - generic [ref=f1e210]:
+          - 'link "Projects: Group related coding sessions so you can run and easily supervise multiple Claude agents at once. Available on Claude Code Desktop. Blog Sep 17, 2026" [ref=f1e212] [cursor=pointer]':
+            - /url: https://claude.com/blog/projects-redesigned
+            - heading [level=3] [ref=f1e213]:
+              - strong [ref=f1e214]: "Projects:"
+              - text: Group related coding sessions so you can run and easily supervise multiple Claude agents at once. Available on Claude Code Desktop.
+            - generic [ref=f1e215]:
+              - text: Blog
+              - generic [ref=f1e219]: Sep 17, 2026
+          - 'link "Auto mode by default: Claude Code now runs in auto mode by default on Pro, Max, and Team plans, so it can work longer while still catching risky commands. Blog Aug 7, 2026" [ref=f1e221] [cursor=pointer]':
+            - /url: https://claude.com/blog/auto-mode-default-in-claude-code
+            - heading [level=3] [ref=f1e222]:
+              - strong [ref=f1e223]: "Auto mode by default:"
+              - text: Claude Code now runs in auto mode by default on Pro, Max, and Team plans, so it can work longer while still catching risky commands.
+            - generic [ref=f1e224]:
+              - text: Blog
+              - generic [ref=f1e228]: Aug 7, 2026
+          - 'link "Self-hosted environments: Run Claude Code sessions on your own infrastructure, inside your network and next to your internal services. Now in public beta. Blog Aug 6, 2026" [ref=f1e230] [cursor=pointer]':
+            - /url: https://claude.com/blog/run-claude-code-sessions-on-your-own-compute
+            - heading [level=3] [ref=f1e231]:
+              - strong [ref=f1e232]: "Self-hosted environments:"
+              - text: Run Claude Code sessions on your own infrastructure, inside your network and next to your internal services. Now in public beta.
+            - generic [ref=f1e233]:
+              - text: Blog
+              - generic [ref=f1e237]: Aug 6, 2026
+          - 'link "Artifacts: Preview in-progress work as a live, interactive artifact built from your session context, and share it with your team. Blog Jun 18, 2026" [ref=f1e239] [cursor=pointer]':
+            - /url: https://claude.com/blog/artifacts-in-claude-code
+            - heading [level=3] [ref=f1e240]:
+              - strong [ref=f1e241]: "Artifacts:"
+              - text: Preview in-progress work as a live, interactive artifact built from your session context, and share it with your team.
+            - generic [ref=f1e242]:
+              - text: Blog
+              - generic [ref=f1e246]: Jun 18, 2026
+        - link "View changelog (opens in new tab)" [ref=f1e248] [cursor=pointer]:
+          - /url: https://code.claude.com/docs/en/changelog
+          - text: View changelog
+          - generic [ref=f1e253]: (opens in new tab)
+    - generic [ref=f1e256]:
+      - generic [ref=f1e257]:
+        - heading "What Claude Code can take on" [level=2] [ref=f1e259]
+        - paragraph [ref=f1e262]: Claude Code builds the plan, asks clarifying questions, and handles work that runs for hours or days.
+      - generic [ref=f1e265]:
+        - generic [ref=f1e266]:
+          - button [ref=f1e268] [cursor=pointer]
+          - button "Copy command to clipboard" [ref=f1e273] [cursor=pointer]:
+            - generic [ref=f1e274]: curl -fsSL https://claude.ai/install.sh | bash
+        - paragraph [ref=f1e279]:
+          - text: Or read the
+          - link "documentation" [ref=f1e280] [cursor=pointer]:
+            - /url: https://code.claude.com/docs/en/overview
+      - generic [ref=f1e281]:
+        - generic [ref=f1e282]:
+          - tablist [ref=f1e284]:
+            - tab [selected] [ref=f1e285] [cursor=pointer]
+            - tab [ref=f1e289] [cursor=pointer]
+            - tab [ref=f1e293] [cursor=pointer]
+          - code [ref=f1e305]:
+            - generic [ref=f1e306]: "> I'm new to this codebase. Can you explain it to me?"
+            - text: "⏺︎ I'll analyze the Excalidraw codebase structure and provide a high-level overview. ⏺︎ Analyze(what: \"Excalidraw codebase structure and provide a high-level overview of what it is, its main components, and how they're organized. Focus on understanding the project's purpose, architecture, and key features.\") Excalidraw is an open-source virtual whiteboard application with a hand-drawn style. It's designed for creating diagrams, wireframes, and collaborative drawings. ## Purpose - Web-based drawing tool with infinite canvas - Hand-drawn aesthetic with support for shapes, arrows, text - End-to-end encrypted collaboration - Works offline as a PWA (Progressive Web App) ## Architecture The project is organized as a monorepo with these main components: 1. Core Package (packages/excalidraw) - React component library for embedding Excalidraw in any application - Handles drawing, rendering, and core functionality - Uses roughjs for the hand-drawn style - Includes export capabilities (PNG, SVG) 2. Web Application (excalidraw-app/) - Full-featured web app at excalidraw.com - Built on top of the core package - Adds collaboration features, local storage, sharing 3. Support Packages - common - Shared utilities and constants - element - Element manipulation and type definitions - math - Mathematical functions for drawing - utils - General utility functions 4. Examples - Integration examples (Next.js, browser script) - Shows how to embed Excalidraw in different environments 5. Documentation (dev-docs/) - API documentation - Integration guides - Component documentation ## Key Features - Real-time collaboration with end-to-end encryption - Export to various formats (PNG, SVG, JSON) - Customizable drawing tools (rectangle, circle, arrows, freehand) - Dark mode support - Localization - Library of shapes and components - Arrow bindings and labels - Image support ## Technology Stack - React for UI - TypeScript for type safety - Firebase for collaboration backend - Jotai for state management - Vite for development and building - IndexedDB/LocalStorage for offline storage The architecture allows for both using Excalidraw as a component in other applications and as a standalone web application with additional features."
+        - list [ref=f1e308]:
+          - listitem [ref=f1e309]:
+            - heading "Code onboarding" [level=3] [ref=f1e310]
+            - paragraph [ref=f1e311]: Claude Code maps and explains entire codebases in a few seconds. It uses agentic search to understand project structure and dependencies without you having to manually select context files.
+          - listitem [ref=f1e312]:
+            - heading "Turn issues into PRs" [level=3] [ref=f1e313]
+            - paragraph [ref=f1e314]: Stop bouncing between tools. Claude Code works with GitHub, GitLab, and your command line tools to read issues, write code, run tests, and open pull requests.
+          - listitem [ref=f1e315]:
+            - heading "Run multi-hour refactors and migrations" [level=3] [ref=f1e316]
+            - paragraph [ref=f1e317]: Claude Code follows imports across the repo, runs your tests, and keeps going when something breaks.
+    - generic [ref=f1e320]:
+      - heading "Meets you where you code" [level=2] [ref=f1e323]
+      - generic [ref=f1e325]:
+        - generic [ref=f1e326]:
+          - img "Claude Code running in a terminal" [ref=f1e328]
+          - generic [ref=f1e329]:
+            - heading "Start in your terminal" [level=3] [ref=f1e330]
+            - paragraph [ref=f1e331]: Super powerful terminal integration. Works with all your CLI tools alongside any IDE.
+            - generic [ref=f1e334]:
+              - button "Copy command to clipboard" [ref=f1e336] [cursor=pointer]:
+                - generic [ref=f1e337]: curl -fsSL https://claude.ai/install.sh | bash
+              - paragraph [ref=f1e342]:
+                - text: Or read the
+                - link "documentation" [ref=f1e343] [cursor=pointer]:
+                  - /url: https://code.claude.com/docs/en/overview
+        - generic [ref=f1e344]:
+          - img "Claude Code extension in VS Code" [ref=f1e346]
+          - generic [ref=f1e347]:
+            - heading "Integrate with your editor" [level=3] [ref=f1e348]
+            - paragraph [ref=f1e349]: Native extensions for VS Code (+ Cursor, Devin Desktop) and JetBrains IDEs.
+            - group [ref=f1e351]:
+              - link "VS Code (opens in new tab)" [ref=f1e352] [cursor=pointer]:
+                - /url: https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code
+                - text: VS Code
+                - generic [ref=f1e353]: (opens in new tab)
+              - link "JetBrains (opens in new tab)" [ref=f1e354] [cursor=pointer]:
+                - /url: https://plugins.jetbrains.com/plugin/27310-claude-code-beta-
+                - text: JetBrains
+                - generic [ref=f1e355]: (opens in new tab)
+        - generic [ref=f1e356]:
+          - img "Claude Code on the web" [ref=f1e358]
+          - generic [ref=f1e359]:
+            - heading "Access anywhere" [level=3] [ref=f1e360]
+            - paragraph [ref=f1e361]: Quick access from browser, mobile app, or Claude on desktop. Great for parallel work or on-the-go coding.
+            - group [ref=f1e363]:
+              - link "Open in browser (opens in new tab)" [ref=f1e364] [cursor=pointer]:
+                - /url: https://claude.ai/code
+                - text: Open in browser
+                - generic [ref=f1e365]: (opens in new tab)
+              - link "Download app" [ref=f1e366] [cursor=pointer]:
+                - /url: /download
+    - generic [ref=f1e370]:
+      - heading "Kick off coding tasks in Slack" [level=2] [ref=f1e373]
+      - group [ref=f1e374]:
+        - link "Add to Slack (opens in new tab)" [ref=f1e375] [cursor=pointer]:
+          - /url: https://slack.com/oauth/v2/authorize?client_id=1601185624273.8899143856786&scope=app_mentions:read,assistant:write,channels:history,channels:read,chat:write,files:read,files:write,groups:history,groups:read,im:history,im:read,im:write,mpim:history,reactions:write,users:read,users:read.email,commands,search:read.public&user_scope=bookmarks:read,channels:history,channels:read,chat:write,emoji:read,files:read,groups:history,groups:read,groups:write,im:history,im:read,im:write,links:read,mpim:history,mpim:read,mpim:write,mpim:write.topic,pins:read,reactions:read,reactions:write,remote_files:read,team:read,users:read,users:read.email,search:read.public,search:read.private,search:read.im,search:read.mpim,search:read.files,search:read.users,canvases:read,canvases:write
+          - text: Add to Slack
+          - generic [ref=f1e376]: (opens in new tab)
+        - link "Learn more" [ref=f1e377] [cursor=pointer]:
+          - /url: /claude-for-slack
+    - generic [ref=f1e379]:
+      - heading "What developers are saying" [level=2] [ref=f1e381]
+      - list [ref=f1e383]:
+        - listitem [ref=f1e384]:
+          - generic [ref=f1e385]:
+            - generic:
+              - generic:
+                - img "Ramp"
+            - generic [ref=f1e386]:
+              - blockquote [ref=f1e387]:
+                - paragraph [ref=f1e388]: “Claude Code has dramatically accelerated our team's coding efficiency. I can now write EDA code in a notebook—pulling data, training a model, and evaluating it with basic metrics—and then ask Claude to convert that into a Metaflow pipeline. This process saves 1-2 days of routine (and often boring!) work per model.”
+              - paragraph [ref=f1e389]: Anton Biryukov, Staff Software Engineer
+              - link "Read story" [ref=f1e390] [cursor=pointer]:
+                - /url: /customers/ramp
+        - listitem [ref=f1e391]:
+          - generic [ref=f1e392]:
+            - generic:
+              - generic:
+                - img "Intercom"
+            - generic [ref=f1e393]:
+              - blockquote [ref=f1e394]:
+                - paragraph [ref=f1e395]: “With Claude, we're not just automating customer service—we're elevating it to truly human quality. This lets support teams think more strategically about customer experience and what makes interactions genuinely valuable.”
+              - paragraph [ref=f1e396]: Fergal Reid, VP of AI
+              - link "Read story" [ref=f1e397] [cursor=pointer]:
+                - /url: /customers/intercom
+        - listitem [ref=f1e398]:
+          - generic [ref=f1e399]:
+            - generic:
+              - generic:
+                - img "Notion"
+            - generic [ref=f1e400]:
+              - blockquote [ref=f1e401]:
+                - paragraph [ref=f1e402]: "“Claude Code is moving our team up a level: we decide what needs to happen, and smooth the process so it can build and verify end-to-end. A big part of my job now is to keep as many instances of Claude Code busy as possible.”"
+              - paragraph [ref=f1e403]: Simon Last, Co-founder
+              - link "Read story" [ref=f1e404] [cursor=pointer]:
+                - /url: /customers/notion
+    - generic [ref=f1e407]:
+      - list [ref=f1e409]:
+        - listitem [ref=f1e410]:
+          - generic [ref=f1e411]:
+            - generic:
+              - img "GitLab"
+        - listitem [ref=f1e412]:
+          - generic [ref=f1e413]:
+            - generic:
+              - img "Dynatrace"
+        - listitem [ref=f1e414]:
+          - generic [ref=f1e415]:
+            - generic:
+              - img "Kubernetes"
+        - listitem [ref=f1e416]:
+          - generic [ref=f1e417]:
+            - generic:
+              - img "Heroku"
+        - listitem [ref=f1e418]:
+          - generic [ref=f1e419]:
+            - generic:
+              - img "Stripe"
+        - listitem [ref=f1e420]:
+          - generic [ref=f1e421]:
+            - generic:
+              - img "Elastic"
+        - listitem [ref=f1e422]:
+          - generic [ref=f1e423]:
+            - generic:
+              - img "Terraform"
+        - listitem [ref=f1e424]:
+          - generic [ref=f1e425]:
+            - generic:
+              - img "Sentry"
+        - listitem [ref=f1e426]:
+          - generic [ref=f1e427]:
+            - generic:
+              - img "AWS"
+        - listitem [ref=f1e428]:
+          - generic [ref=f1e429]:
+            - generic:
+              - img "MongoDB"
+        - listitem [ref=f1e430]:
+          - generic [ref=f1e431]:
+            - generic:
+              - img "Atlassian"
+        - listitem [ref=f1e432]:
+          - generic [ref=f1e433]:
+            - generic:
+              - img "Datadog"
+      - generic [ref=f1e434]:
+        - heading "Connects with your favorite command line tools" [level=2] [ref=f1e435]
+        - paragraph [ref=f1e436]: Your terminal is where real work happens. Claude Code connects with the tools that power development—deployment, databases, monitoring, version control. Rather than adding another interface to juggle, it enhances your existing stack.
+    - generic [ref=f1e439]:
+      - heading "FAQ" [level=2] [ref=f1e442]
+      - generic [ref=f1e444]:
+        - generic [ref=f1e445]:
+          - heading [level=3] [ref=f1e446]:
+            - button "How do I get started with Claude?" [ref=f1e447] [cursor=pointer]
+          - paragraph [ref=f1e453]:
+            - text: You can access Claude Code with a Claude Pro or Max plan, a Team or Enterprise plan, or a Claude Console account.
+            - link "Download Claude Code" [ref=f1e454] [cursor=pointer]:
+              - /url: https://code.claude.com/docs/en/overview
+            - text: and sign in with your respective Claude or Console credentials.
+        - generic [ref=f1e455]:
+          - heading [level=3] [ref=f1e456]:
+            - button "What kind of tasks can Claude Code handle?" [ref=f1e457] [cursor=pointer]
+          - generic [ref=f1e462]:
+            - paragraph [ref=f1e463]: Claude Code can handle routine work like bug fixes and testing, and larger jobs like refactors and new features that are long-running and asynchronous.
+            - paragraph [ref=f1e464]: You set the direction as the architect and orchestrator, and Claude Code does the work. Describe what you want and it plans, writes code, runs tests, and opens pull requests. It can work on several tasks at once, and surface decisions you need to make for it to keep going.
+        - generic [ref=f1e465]:
+          - heading [level=3] [ref=f1e466]:
+            - button "How does Claude Code work with my existing tools?" [ref=f1e467] [cursor=pointer]
+          - paragraph [ref=f1e473]: Claude Code runs in your terminal and works alongside your preferred IDE and development tools without requiring you to change your workflow. Claude Code can also use command line tools (like Git) and MCP servers (like GitHub) to extend its own capabilities using your tools.
+        - generic [ref=f1e474]:
+          - heading [level=3] [ref=f1e475]:
+            - button "Is Claude Code secure?" [ref=f1e476] [cursor=pointer]
+          - paragraph [ref=f1e482]: Yes. Claude Code runs locally in your terminal and talks directly to model APIs without requiring a backend server or remote code index. It also asks for permission before making changes to your files or running commands.
+        - generic [ref=f1e483]:
+          - heading [level=3] [ref=f1e484]:
+            - button "What are the system requirements to run Claude Code?" [ref=f1e485] [cursor=pointer]
+          - paragraph [ref=f1e491]:
+            - text: Claude Code works on macOS, Linux, and Windows.
+            - link "See full system requirements" [ref=f1e492] [cursor=pointer]:
+              - /url: https://code.claude.com/docs/en/setup#system-requirements
+            - text: .
+        - generic [ref=f1e493]:
+          - heading [level=3] [ref=f1e494]:
+            - button "How much does Claude Code cost?" [ref=f1e495] [cursor=pointer]
+          - paragraph [ref=f1e501]:
+            - text: When used with a Claude Console account, Claude Code consumes API tokens at
+            - link "standard API pricing" [ref=f1e502] [cursor=pointer]:
+              - /url: https://claude.com/pricing#api
+            - text: .
+        - generic [ref=f1e503]:
+          - heading [level=3] [ref=f1e504]:
+            - button "Does Claude Code work with the Claude desktop app?" [ref=f1e505] [cursor=pointer]
+          - paragraph [ref=f1e511]:
+            - text: Yes. Max, Pro, Team, and Enterprise users can access Claude Code on the
+            - link "Claude desktop app" [ref=f1e512] [cursor=pointer]:
+              - /url: https://claude.com/download
+            - text: .
+        - generic [ref=f1e513]:
+          - heading [level=3] [ref=f1e514]:
+            - button "What is fast mode on Claude Code?" [ref=f1e515] [cursor=pointer]
+          - generic [ref=f1e520]:
+            - paragraph [ref=f1e521]: "Fast mode is a high-speed configuration for Opus 5.5, making the model 2.5x faster at a higher cost per token. Fast mode is available:"
+            - list [ref=f1e522]:
+              - listitem [ref=f1e523]: In research preview on Claude Code, and is priced at $8/$40 per million tokens.
+              - listitem [ref=f1e524]: On consumption-based plans.
+              - listitem [ref=f1e525]: Via usage credits for users on subscription plans.
+    - generic [ref=f1e529]:
+      - heading "Get the technical rundown" [level=2] [ref=f1e532]
+      - generic [ref=f1e534]:
+        - link [ref=f1e536] [cursor=pointer]:
+          - /url: https://code.claude.com/docs/en/overview
+          - heading "Claude Code documentation" [level=3] [ref=f1e537]
+          - generic [ref=f1e538]: Developer docs
+        - link [ref=f1e543] [cursor=pointer]:
+          - /url: https://code.claude.com/docs/en/common-workflows
+          - heading "Common workflows" [level=3] [ref=f1e544]
+          - generic [ref=f1e545]: Developer docs
+        - link [ref=f1e550] [cursor=pointer]:
+          - /url: https://claude.com/blog/using-claude-md-files
+          - heading "Using CLAUDE.md files" [level=3] [ref=f1e551]
+          - generic [ref=f1e552]: Blog
+        - link [ref=f1e557] [cursor=pointer]:
+          - /url: https://claude.com/blog/introduction-to-agentic-coding
+          - heading "Introduction to agentic coding" [level=3] [ref=f1e558]
+          - generic [ref=f1e559]: Blog
+        - link [ref=f1e564] [cursor=pointer]:
+          - /url: https://www.anthropic.com/news/how-anthropic-teams-use-claude-code
+          - heading "How Anthropic teams use Claude Code" [level=3] [ref=f1e565]
+          - generic [ref=f1e566]: Blog
+        - link [ref=f1e571] [cursor=pointer]:
+          - /url: https://claude.com/blog/fix-software-bugs-faster-with-claude
+          - heading "Fix software bugs faster with Claude" [level=3] [ref=f1e572]
+          - generic [ref=f1e573]: Blog
+    - generic [ref=f1e579]:
+      - generic [ref=f1e580]:
+        - heading "Create what’s exciting. Maintain what’s essential." [level=2] [ref=f1e581]
+        - paragraph [ref=f1e582]: Use Claude Code where you work
+        - generic [ref=f1e585]:
+          - generic [ref=f1e586]:
+            - button [ref=f1e588] [cursor=pointer]
+            - button "Copy command to clipboard" [ref=f1e593] [cursor=pointer]:
+              - generic [ref=f1e594]: curl -fsSL https://claude.ai/install.sh | bash
+          - paragraph [ref=f1e599]:
+            - text: Or read the
+            - link "documentation" [ref=f1e600] [cursor=pointer]:
+              - /url: https://code.claude.com/docs/en/overview
+      - generic [ref=f1e601]:
+        - heading "Get the developer newsletter" [level=3] [ref=f1e603]
+        - paragraph [ref=f1e604]: Product updates, how-tos, community spotlights, and more. Delivered monthly to your inbox.
+        - generic [ref=f1e606]:
+          - textbox "Email address" [ref=f1e607]:
+            - /placeholder: Enter your email
+          - button "Subscribe" [disabled] [ref=f1e608]
+        - paragraph [ref=f1e613]: Please provide your email address if you'd like to receive our monthly developer newsletter. You can unsubscribe at any time.
+  - contentinfo [ref=f1e614]:
+    - generic [ref=f1e615]:
+      - generic [ref=f1e616]:
+        - generic [ref=f1e618]:
+          - link [ref=f1e619] [cursor=pointer]:
+            - /url: /
+            - img "Claude" [ref=f1e620]
+          - generic [ref=f1e624]:
+            - textbox "Ask Claude" [ref=f1e625]:
+              - /placeholder: How can I help you today?
+            - button "Submit" [ref=f1e626] [cursor=pointer]
+        - generic [ref=f1e632]:
+          - generic [ref=f1e633]:
+            - heading "Products" [level=2] [ref=f1e634]
+            - list [ref=f1e635]:
+              - listitem [ref=f1e636]:
+                - link "Claude" [ref=f1e637] [cursor=pointer]:
+                  - /url: /product/overview
+              - listitem [ref=f1e638]:
+                - link "Claude Code" [ref=f1e639] [cursor=pointer]:
+                  - /url: /product/claude-code
+              - listitem [ref=f1e640]:
+                - link "Claude Cowork" [ref=f1e641] [cursor=pointer]:
+                  - /url: /product/cowork
+              - listitem [ref=f1e642]:
+                - link "@Claude" [ref=f1e643] [cursor=pointer]:
+                  - /url: /product/tag
+              - listitem [ref=f1e644]:
+                - link "Claude Science" [ref=f1e645] [cursor=pointer]:
+                  - /url: /product/claude-science
+              - listitem [ref=f1e646]:
+                - link "Claude Security" [ref=f1e647] [cursor=pointer]:
+                  - /url: /product/claude-security
+              - listitem [ref=f1e648]:
+                - link "Download app" [ref=f1e649] [cursor=pointer]:
+                  - /url: /download
+              - listitem [ref=f1e650]:
+                - link "Pricing" [ref=f1e651] [cursor=pointer]:
+                  - /url: /pricing
+              - listitem [ref=f1e652]:
+                - link "Log in" [ref=f1e653] [cursor=pointer]:
+                  - /url: https://claude.ai/login
+          - generic [ref=f1e654]:
+            - heading "Capabilities" [level=2] [ref=f1e655]
+            - list [ref=f1e656]:
+              - listitem [ref=f1e657]:
+                - link "Artifacts" [ref=f1e658] [cursor=pointer]:
+                  - /url: /features/artifacts
+              - listitem [ref=f1e659]:
+                - link "Design" [ref=f1e660] [cursor=pointer]:
+                  - /url: /product/design
+              - listitem [ref=f1e661]:
+                - link "Connectors" [ref=f1e662] [cursor=pointer]:
+                  - /url: /marketplace/connectors-plugins
+              - listitem [ref=f1e663]:
+                - link "Plugins" [ref=f1e664] [cursor=pointer]:
+                  - /url: /marketplace/plugins
+              - listitem [ref=f1e665]:
+                - link "Skills" [ref=f1e666] [cursor=pointer]:
+                  - /url: /skills
+          - generic [ref=f1e667]:
+            - heading "Extensions" [level=2] [ref=f1e668]
+            - list [ref=f1e669]:
+              - listitem [ref=f1e670]:
+                - link "Claude in Chrome" [ref=f1e671] [cursor=pointer]:
+                  - /url: /claude-in-chrome
+              - listitem [ref=f1e672]:
+                - link "Claude for Microsoft 365" [ref=f1e673] [cursor=pointer]:
+                  - /url: /claude-for-microsoft-365
+          - generic [ref=f1e674]:
+            - heading "Models" [level=2] [ref=f1e675]
+            - list [ref=f1e676]:
+              - listitem [ref=f1e677]:
+                - link "Mythos" [ref=f1e678] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/claude/mythos
+              - listitem [ref=f1e679]:
+                - link "Fable" [ref=f1e680] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/claude/fable
+              - listitem [ref=f1e681]:
+                - link "Opus" [ref=f1e682] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/claude/opus
+              - listitem [ref=f1e683]:
+                - link "Sonnet" [ref=f1e684] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/claude/sonnet
+              - listitem [ref=f1e685]:
+                - link "Haiku" [ref=f1e686] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/claude/haiku
+          - generic [ref=f1e687]:
+            - heading "Enterprise" [level=2] [ref=f1e688]
+            - list [ref=f1e689]:
+              - listitem [ref=f1e690]:
+                - link "Overview" [ref=f1e691] [cursor=pointer]:
+                  - /url: /solutions/enterprise
+              - listitem [ref=f1e692]:
+                - link "Claude Code for Enterprise" [ref=f1e693] [cursor=pointer]:
+                  - /url: /product/claude-code/enterprise
+          - generic [ref=f1e694]:
+            - heading "Departments" [level=2] [ref=f1e695]
+            - list [ref=f1e696]:
+              - listitem [ref=f1e697]:
+                - link "Customer support" [ref=f1e698] [cursor=pointer]:
+                  - /url: /solutions/customer-support
+              - listitem [ref=f1e699]:
+                - link "Cybersecurity" [ref=f1e700] [cursor=pointer]:
+                  - /url: /solutions/cybersecurity
+              - listitem [ref=f1e701]:
+                - link "Legal" [ref=f1e702] [cursor=pointer]:
+                  - /url: /solutions/legal
+              - listitem [ref=f1e703]:
+                - link "Sales" [ref=f1e704] [cursor=pointer]:
+                  - /url: /solutions/sales
+          - generic [ref=f1e705]:
+            - heading "Industries" [level=2] [ref=f1e706]
+            - list [ref=f1e707]:
+              - listitem [ref=f1e708]:
+                - link "Financial services" [ref=f1e709] [cursor=pointer]:
+                  - /url: /solutions/financial-services
+              - listitem [ref=f1e710]:
+                - link "Government" [ref=f1e711] [cursor=pointer]:
+                  - /url: /solutions/government
+              - listitem [ref=f1e712]:
+                - link "Healthcare" [ref=f1e713] [cursor=pointer]:
+                  - /url: /solutions/healthcare
+              - listitem [ref=f1e714]:
+                - link "Higher education" [ref=f1e715] [cursor=pointer]:
+                  - /url: /solutions/education
+              - listitem [ref=f1e716]:
+                - link "K-12 teachers" [ref=f1e717] [cursor=pointer]:
+                  - /url: /solutions/teachers
+              - listitem [ref=f1e718]:
+                - link "Life sciences" [ref=f1e719] [cursor=pointer]:
+                  - /url: /solutions/life-sciences
+              - listitem [ref=f1e720]:
+                - link "Nonprofits" [ref=f1e721] [cursor=pointer]:
+                  - /url: /solutions/nonprofits
+              - listitem [ref=f1e722]:
+                - link "Small business" [ref=f1e723] [cursor=pointer]:
+                  - /url: /solutions/small-business
+          - generic [ref=f1e724]:
+            - heading "Programs" [level=2] [ref=f1e725]
+            - list [ref=f1e726]:
+              - listitem [ref=f1e727]:
+                - link "Campus" [ref=f1e728] [cursor=pointer]:
+                  - /url: /programs/campus
+              - listitem [ref=f1e729]:
+                - link "Frontier Academy" [ref=f1e730] [cursor=pointer]:
+                  - /url: /programs/frontier-academy
+              - listitem [ref=f1e731]:
+                - link "Scientists" [ref=f1e732] [cursor=pointer]:
+                  - /url: /programs/team-plan-for-scientists
+              - listitem [ref=f1e733]:
+                - link "Startups" [ref=f1e734] [cursor=pointer]:
+                  - /url: /programs/startups
+          - generic [ref=f1e735]:
+            - heading "Developers" [level=2] [ref=f1e736]
+            - list [ref=f1e737]:
+              - listitem [ref=f1e738]:
+                - link "Developer docs" [ref=f1e739] [cursor=pointer]:
+                  - /url: https://code.claude.com/docs/en/overview
+              - listitem [ref=f1e740]:
+                - link "Developer blog" [ref=f1e741] [cursor=pointer]:
+                  - /url: https://claude.dev
+              - listitem [ref=f1e742]:
+                - link "Community" [ref=f1e743] [cursor=pointer]:
+                  - /url: /community
+              - listitem [ref=f1e744]:
+                - link "Console" [ref=f1e745] [cursor=pointer]:
+                  - /url: https://platform.claude.com/docs/en/home
+              - listitem [ref=f1e746]:
+                - link "Engineering at Anthropic" [ref=f1e747] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/engineering
+          - generic [ref=f1e748]:
+            - heading "Platform" [level=2] [ref=f1e749]
+            - list [ref=f1e750]:
+              - listitem [ref=f1e751]:
+                - link "Overview" [ref=f1e752] [cursor=pointer]:
+                  - /url: /platform/api
+              - listitem [ref=f1e753]:
+                - link "Marketplace" [ref=f1e754] [cursor=pointer]:
+                  - /url: /marketplace
+              - listitem [ref=f1e755]:
+                - link "Claude on AWS" [ref=f1e756] [cursor=pointer]:
+                  - /url: /partners/claude-on-aws
+              - listitem [ref=f1e757]:
+                - link "Google Cloud" [ref=f1e758] [cursor=pointer]:
+                  - /url: /partners/google-cloud
+              - listitem [ref=f1e759]:
+                - link "Microsoft Foundry" [ref=f1e760] [cursor=pointer]:
+                  - /url: /partners/microsoft-foundry
+          - generic [ref=f1e761]:
+            - heading "Resources" [level=2] [ref=f1e762]
+            - list [ref=f1e763]:
+              - listitem [ref=f1e764]:
+                - link "Overview" [ref=f1e765] [cursor=pointer]:
+                  - /url: /resources
+              - listitem [ref=f1e766]:
+                - link "Articles" [ref=f1e767] [cursor=pointer]:
+                  - /url: /resources/articles
+              - listitem [ref=f1e768]:
+                - link "Webinars" [ref=f1e769] [cursor=pointer]:
+                  - /url: /resources/webinars
+              - listitem [ref=f1e770]:
+                - link "Claude partner network" [ref=f1e771] [cursor=pointer]:
+                  - /url: /partners
+              - listitem [ref=f1e772]:
+                - link "Claude Academy" [ref=f1e773] [cursor=pointer]:
+                  - /url: https://academy.claude.com/
+              - listitem [ref=f1e774]:
+                - link "Customer stories" [ref=f1e775] [cursor=pointer]:
+                  - /url: /customers
+              - listitem [ref=f1e776]:
+                - link "Events" [ref=f1e777] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/events
+              - listitem [ref=f1e778]:
+                - link "Powered by Claude" [ref=f1e779] [cursor=pointer]:
+                  - /url: /partners/powered-by-claude
+              - listitem [ref=f1e780]:
+                - link "Service partners" [ref=f1e781] [cursor=pointer]:
+                  - /url: /marketplace/service-partners
+          - generic [ref=f1e782]:
+            - heading "Help and security" [level=2] [ref=f1e783]
+            - list [ref=f1e784]:
+              - listitem [ref=f1e785]:
+                - link "Availability" [ref=f1e786] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/supported-countries
+              - listitem [ref=f1e787]:
+                - link "Check files" [ref=f1e788] [cursor=pointer]:
+                  - /url: /check-files
+              - listitem [ref=f1e789]:
+                - link "Regional compliance" [ref=f1e790] [cursor=pointer]:
+                  - /url: /regional-compliance
+              - listitem [ref=f1e791]:
+                - link "Report abuse" [ref=f1e792] [cursor=pointer]:
+                  - /url: /form/anthropic-content-reporting
+              - listitem [ref=f1e793]:
+                - link "Security and compliance" [ref=f1e794] [cursor=pointer]:
+                  - /url: https://trust.anthropic.com/
+              - listitem [ref=f1e795]:
+                - link "Status" [ref=f1e796] [cursor=pointer]:
+                  - /url: https://status.anthropic.com/
+              - listitem [ref=f1e797]:
+                - link "Support center" [ref=f1e798] [cursor=pointer]:
+                  - /url: https://support.claude.com/en/
+          - generic [ref=f1e799]:
+            - heading "Company" [level=2] [ref=f1e800]
+            - list [ref=f1e801]:
+              - listitem [ref=f1e802]:
+                - link "Anthropic" [ref=f1e803] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/
+              - listitem [ref=f1e804]:
+                - link "Careers" [ref=f1e805] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/careers
+              - listitem [ref=f1e806]:
+                - link "Policy" [ref=f1e807] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/policy
+              - listitem [ref=f1e808]:
+                - link "Research" [ref=f1e809] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/research
+              - listitem [ref=f1e810]:
+                - link "Anthropic news" [ref=f1e811] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/news
+              - listitem [ref=f1e812]:
+                - link "Policy on the AI Exponential" [ref=f1e813] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/policy-on-the-ai-exponential
+              - listitem [ref=f1e814]:
+                - link "Responsible Scaling Policy" [ref=f1e815] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy
+              - listitem [ref=f1e816]:
+                - link "Transparency" [ref=f1e817] [cursor=pointer]:
+                  - /url: https://anthropic.com/transparency
+          - generic [ref=f1e818]:
+            - heading "Terms and policies" [level=2] [ref=f1e819]
+            - list [ref=f1e820]:
+              - listitem [ref=f1e821]:
+                - button "Privacy choices" [ref=f1e822] [cursor=pointer]
+              - listitem [ref=f1e823]:
+                - link "Privacy policy" [ref=f1e824] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/legal/privacy
+              - listitem [ref=f1e825]:
+                - link "Responsible disclosure policy" [ref=f1e826] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/responsible-disclosure-policy
+              - listitem [ref=f1e827]:
+                - 'link "Terms of service: Commercial" [ref=f1e828] [cursor=pointer]':
+                  - /url: https://www.anthropic.com/legal/commercial-terms
+              - listitem [ref=f1e829]:
+                - 'link "Terms of service: Consumer" [ref=f1e830] [cursor=pointer]':
+                  - /url: https://www.anthropic.com/legal/consumer-terms
+              - listitem [ref=f1e831]:
+                - 'link "Terms of Service: US K-12" [ref=f1e832] [cursor=pointer]':
+                  - /url: https://anthropic.com/legal/k12-terms
+              - listitem [ref=f1e833]:
+                - 'link "Data Processing Agreement: US K-12" [ref=f1e834] [cursor=pointer]':
+                  - /url: https://anthropic.com/legal/k12-dpa
+              - listitem [ref=f1e835]:
+                - link "Usage Policy" [ref=f1e836] [cursor=pointer]:
+                  - /url: https://www.anthropic.com/legal/aup
+        - generic [ref=f1e837]:
+          - img "Anthropic" [ref=f1e838]
+          - paragraph [ref=f1e848]: © 2026 Anthropic PBC
+      - generic [ref=f1e849]:
+        - separator [ref=f1e850]
+        - generic [ref=f1e851]:
+          - generic [ref=f1e852]:
+            - link "X (Twitter)" [ref=f1e853] [cursor=pointer]:
+              - /url: https://x.com/claudeai
+            - link "Threads" [ref=f1e856] [cursor=pointer]:
+              - /url: https://www.threads.com/@claudeai
+            - link "LinkedIn" [ref=f1e859] [cursor=pointer]:
+              - /url: https://www.linkedin.com/showcase/claude/
+            - link "YouTube" [ref=f1e862] [cursor=pointer]:
+              - /url: https://www.youtube.com/@anthropic-ai
+            - link "Instagram" [ref=f1e865] [cursor=pointer]:
+              - /url: https://www.instagram.com/claudeai
+          - 'button "Language: English" [ref=f1e870] [cursor=pointer]':
+            - generic [ref=f1e874]: English

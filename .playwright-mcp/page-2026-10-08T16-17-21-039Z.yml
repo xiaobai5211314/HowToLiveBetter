@@ -1,0 +1,131 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - button "打开筛选" [ref=e4] [cursor=pointer]
+      - link:
+        - /url: ./
+      - searchbox "搜索条目" [ref=e8]
+      - generic [ref=e9]:
+        - link "README" [ref=e10] [cursor=pointer]:
+          - /url: README.md
+        - link "GitHub 仓库" [ref=e13] [cursor=pointer]:
+          - /url: https://github.com/xiaobai5211314/HowToLiveBetter
+        - button "切换深色模式" [ref=e16] [cursor=pointer]
+  - complementary [ref=e20]:
+    - generic [ref=e21]: 章节
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - text: 性价比
+        - generic [ref=e25]: 作者判断，同口径内可比
+      - generic [ref=e26]:
+        - button "极高" [ref=e27] [cursor=pointer]
+        - button "高" [ref=e28] [cursor=pointer]
+        - button "一般" [ref=e29] [cursor=pointer]
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - text: 换回什么
+        - generic [ref=e32]: 口径，不跨口径比较
+      - generic [ref=e33]:
+        - button "寿命" [ref=e34] [cursor=pointer]
+        - button "钱" [ref=e35] [cursor=pointer]
+        - button "时间精力" [ref=e36] [cursor=pointer]
+        - button "人身自由" [ref=e37] [cursor=pointer]
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - text: 证据等级
+        - generic [ref=e40]: 荟萃/RCT · 有研究 · 共识
+      - generic [ref=e41]:
+        - button "A 级" [ref=e42] [cursor=pointer]
+        - button "B 级" [ref=e43] [cursor=pointer]
+        - button "C 级" [ref=e44] [cursor=pointer]
+    - generic [ref=e45]:
+      - generic [ref=e46]: 花钱
+      - generic [ref=e47]:
+        - button "不花钱" [ref=e48] [cursor=pointer]
+        - button "少" [ref=e49] [cursor=pointer]
+        - button "多" [ref=e50] [cursor=pointer]
+    - generic [ref=e51]:
+      - generic [ref=e52]: 花时间
+      - generic [ref=e53]:
+        - button "顺手" [ref=e54] [cursor=pointer]
+        - button "几小时" [ref=e55] [cursor=pointer]
+        - button "每天占用" [ref=e56] [cursor=pointer]
+    - generic [ref=e57]:
+      - generic [ref=e58]: 要毅力
+      - generic [ref=e59]:
+        - button "不用" [ref=e60] [cursor=pointer]
+        - button "一点" [ref=e61] [cursor=pointer]
+        - button "很多" [ref=e62] [cursor=pointer]
+    - generic [ref=e63]:
+      - generic [ref=e64] [cursor=pointer]:
+        - checkbox "只看标了争议的" [ref=e65]
+        - text: 只看标了争议的
+      - generic [ref=e66] [cursor=pointer]:
+        - checkbox "只看有待核实的" [ref=e67]
+        - text: 只看有待核实的
+      - button "清空筛选" [ref=e68] [cursor=pointer]
+    - generic [ref=e69]:
+      - paragraph [ref=e70]: 章节一次只看一个，成本和等级可多选。同一组多选是「或」，不同组之间是「且」。
+      - paragraph [ref=e71]: 每节内按性价比从高到低排，检索不改变顺序。
+      - paragraph [ref=e72]:
+        - text: 正文与标签来自仓库
+        - link "book/" [ref=e73] [cursor=pointer]:
+          - /url: https://github.com/xiaobai5211314/HowToLiveBetter/tree/main/book
+        - text: 下的 34 个文件，改正文即改这里。
+  - main [ref=e74]:
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - heading "高性价比人生指南" [level=1] [ref=e77]
+        - paragraph [ref=e78]: 每一条都回答两个问题：花掉什么，换回什么。
+        - paragraph [ref=e79]: 换回的算在谁头上也分档：你自己最高，其次配偶和直系亲属，再次朋友同事，陌生人最低——最低不等于零，只是回报的指望小、要连风险一起看。
+        - paragraph [ref=e80]: 不用全做：这是一份按性价比排好的备选单，不是任务清单。挑走一两条就算数，剩下的需要时再回来查——想挑省力的，左边把「花钱」选「不花钱」、「要毅力」选「不用」，剩下的就是。作者自己也没做到其中大部分。正文里带虚线的「第 X 条」可以点开，就地看那条写了什么，不用自己翻过去。
+        - generic [ref=e81]: 当前显示 – 条，共 – 条
+        - generic [ref=e82]:
+          - text: 长文：
+          - link "遇到陌生人出事该不该停" [ref=e83] [cursor=pointer]:
+            - /url: https://github.com/xiaobai5211314/HowToLiveBetter/blob/main/docs/%E9%81%87%E5%88%B0%E9%99%8C%E7%94%9F%E4%BA%BA%E5%87%BA%E4%BA%8B%E8%AF%A5%E4%B8%8D%E8%AF%A5%E5%81%9C.md
+          - text: ·
+          - link "家庭应急装备清单" [ref=e84] [cursor=pointer]:
+            - /url: https://github.com/xiaobai5211314/HowToLiveBetter/blob/main/docs/%E5%AE%B6%E5%BA%AD%E5%BA%94%E6%80%A5%E8%A3%85%E5%A4%87%E6%B8%85%E5%8D%95.md
+          - text: ·
+          - link "结婚划不划算" [ref=e85] [cursor=pointer]:
+            - /url: https://github.com/xiaobai5211314/HowToLiveBetter/blob/main/docs/%E7%BB%93%E5%A9%9A%E5%88%92%E4%B8%8D%E5%88%92%E7%AE%97.md
+          - text: ·
+          - link "做平台要办哪些证" [ref=e86] [cursor=pointer]:
+            - /url: https://github.com/xiaobai5211314/HowToLiveBetter/blob/main/docs/%E5%81%9A%E5%B9%B3%E5%8F%B0%E8%A6%81%E5%8A%9E%E5%93%AA%E4%BA%9B%E8%AF%81.md
+          - text: ·
+          - link "生物钟和夜班" [ref=e87] [cursor=pointer]:
+            - /url: https://github.com/xiaobai5211314/HowToLiveBetter/blob/main/docs/%E7%94%9F%E7%89%A9%E9%92%9F%E5%92%8C%E5%A4%9C%E7%8F%AD.md
+          - text: ·
+          - link "被裁了之后先做什么" [ref=e88] [cursor=pointer]:
+            - /url: https://github.com/xiaobai5211314/HowToLiveBetter/blob/main/docs/%E8%A2%AB%E8%A3%81%E4%BA%86%E4%B9%8B%E5%90%8E%E5%85%88%E5%81%9A%E4%BB%80%E4%B9%88.md
+          - text: ·
+          - link "孩子出生前后要办的事" [ref=e89] [cursor=pointer]:
+            - /url: https://github.com/xiaobai5211314/HowToLiveBetter/blob/main/docs/%E5%AD%A9%E5%AD%90%E5%87%BA%E7%94%9F%E5%89%8D%E5%90%8E%E8%A6%81%E5%8A%9E%E7%9A%84%E4%BA%8B.md
+          - text: ·
+          - link "刚确诊慢性病之后" [ref=e90] [cursor=pointer]:
+            - /url: https://github.com/xiaobai5211314/HowToLiveBetter/blob/main/docs/%E5%88%9A%E7%A1%AE%E8%AF%8A%E6%85%A2%E6%80%A7%E7%97%85%E4%B9%8B%E5%90%8E.md
+          - text: ·
+          - link "换工作、换城市之前" [ref=e91] [cursor=pointer]:
+            - /url: https://github.com/xiaobai5211314/HowToLiveBetter/blob/main/docs/%E6%8D%A2%E5%B7%A5%E4%BD%9C%E3%80%81%E6%8D%A2%E5%9F%8E%E5%B8%82%E4%B9%8B%E5%89%8D.md
+          - text: ·
+          - link "来源核实记录" [ref=e92] [cursor=pointer]:
+            - /url: https://github.com/xiaobai5211314/HowToLiveBetter/tree/main/docs/%E6%A0%B8%E5%AE%9E%E8%AE%B0%E5%BD%95
+        - generic [ref=e93]:
+          - text: AI 助手：
+          - link "让 Claude Code 或 Codex 照这本书回答你的问题（skill 装法）" [ref=e94] [cursor=pointer]:
+            - /url: https://github.com/xiaobai5211314/HowToLiveBetter/blob/main/skills/life-decision-guide/README.md
+        - group [ref=e95]:
+          - generic "看不懂的缩写和名词" [ref=e96] [cursor=pointer]
+      - generic [ref=e97]: 正在读取正文 …
+      - generic [ref=e100]:
+        - text: 数字口径以条目内标注为准：第 1、2 节是 ACM 或特定死因，第 3、4 节是精力/时间，第 5 节是金钱，第 7 节是金钱与保障，第 8、9 节是金钱与人身自由，互不换算。来源核实过程见
+        - link "docs/核实记录" [ref=e101] [cursor=pointer]:
+          - /url: https://github.com/xiaobai5211314/HowToLiveBetter/tree/main/docs/%E6%A0%B8%E5%AE%9E%E8%AE%B0%E5%BD%95
+        - text: 。正文原作《高性价比人生指南》（原作者
+        - link "eternity4719" [ref=e102] [cursor=pointer]:
+          - /url: https://github.com/eternity4719/HowToLiveBetter
+        - text: ），按
+        - link "CC BY 4.0" [ref=e103] [cursor=pointer]:
+          - /url: https://creativecommons.org/licenses/by/4.0/deed.zh-hans
+        - text: 授权；本站在原作基础上删改。
