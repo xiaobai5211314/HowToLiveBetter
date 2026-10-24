@@ -126,8 +126,10 @@ let SEQ = 0;
 
 // ---------- 取历史 ----------
 const sinceTs = Math.floor(new Date(`${SINCE}T00:00:00+08:00`).getTime() / 1000);
-const base = git(['rev-list', '-1', '--first-parent', `--before=${sinceTs}`, 'HEAD']).toString().trim();
-if (!base) throw new Error(`找不到 ${SINCE} 之前的提交。CI 上 checkout 要加 fetch-depth: 0`);
+let base = '';
+try { base = git(['rev-list', '-1', '--first-parent', `--before=${sinceTs}`, 'HEAD']).toString().trim(); } catch {}
+if (!base) { try { base = git(['rev-list', '-1', '--first-parent', `--before=${sinceTs}`, 'upstream/main']).toString().trim(); } catch {} }
+if (!base) { try { base = git(['rev-list', '--max-parents=0', 'HEAD']).toString().trim(); } catch {} }
 const log = git(['log', '--first-parent', '--reverse', '--diff-merges=first-parent', '--name-only',
   '--format=@%H %ct', `${base}..HEAD`, '--', 'book/']).toString();
 const commits = [];

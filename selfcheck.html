@@ -4,42 +4,32 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>生活自查 · 高性价比人生指南</title>
-<link rel="preconnect" href="https://guzhicdn.21212121.xyz">
-
-<link href="https://guzhicdn.21212121.xyz/vendor/fonts/rensheng-fonts.css" rel="stylesheet">
 <meta name="description" content="回答一组是否题，看看书里哪些事你还没做到：哪一块漏得最多、先做哪几件、哪些一次办完就行。每条单独给出证据和出处，不汇总成「少活几年」。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233451b2'/%3E%3Cpath d='M17 33l10 11 20-24' fill='none' stroke='white' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-<link rel="alternate icon" href="/favicon.ico">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script>(function(){try{var s=localStorage.getItem('theme');var d=s?s==='dark':matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark')}catch(e){}})();</script>
 <style>
 /* 配色、字体与 index.html 同一套（VitePress 默认主题） */
 :root{
-  --bg:#f5f4ed; --bg-alt:#edebe1; --bg-soft:#faf9f5; --bg-mute:#e8e6dc; --bg-elv:#faf9f5;
-  --divider:#e0ddcf; --gutter:#e8e6dc;
-  --t1:#141413; --t2:#5e5d59; --t3:#87867f;
-  --brand-1:#c96442; --brand-2:#b4573a; --brand-3:#d97757; --brand-soft:rgba(201,100,66,.11);
-  --green-1:#4d7c5f; --green-soft:rgba(77,124,95,.13);
-  --yellow-1:#96602e; --yellow-soft:rgba(201,140,80,.15);
-  --red-1:#b53333; --red-soft:rgba(181,51,51,.10);
-  --gray-1:#5e5d59; --gray-soft:rgba(139,134,120,.13);
-  --mark:rgba(217,119,87,.28);
-  --shadow:0 1px 2px rgba(40,35,25,.05),0 4px 24px rgba(40,35,25,.06);
-  --font:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
-  --font-serif:"Noto Serif SC","Source Han Serif SC","Songti SC",Georgia,"Times New Roman",serif;
+  --bg:#ffffff; --bg-alt:#f6f6f7; --bg-soft:#f6f6f7; --bg-mute:#f1f1f2;
+  --divider:#e2e2e3;
+  --t1:rgba(60,60,67,1); --t2:rgba(60,60,67,.78); --t3:rgba(60,60,67,.56);
+  --brand-1:#3451b2; --brand-2:#3a5ccc; --brand-soft:rgba(100,108,255,.14);
+  --green-1:#18794e; --green-soft:rgba(16,185,129,.14);
+  --yellow-1:#915930; --yellow-soft:rgba(234,179,8,.14);
+  --red-1:#b8272c; --red-soft:rgba(244,63,94,.14);
+  --gray-1:#565a5f; --gray-soft:rgba(142,150,170,.14);
+  --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
   color-scheme:light;
 }
 html.dark{
-  --bg:#141413; --bg-alt:#1a1a17; --bg-soft:#1f1f1b; --bg-mute:#2b2b27; --bg-elv:#232320;
-  --divider:#30302e; --gutter:#000000;
-  --t1:#faf9f5; --t2:#b0aea5; --t3:#87867f;
-  --brand-1:#d97757; --brand-2:#e08a6d; --brand-3:#c96442; --brand-soft:rgba(217,119,87,.16);
-  --green-1:#8fbf9d; --green-soft:rgba(143,191,157,.14);
-  --yellow-1:#d9a066; --yellow-soft:rgba(217,160,102,.15);
-  --red-1:#e0837c; --red-soft:rgba(224,131,124,.14);
-  --gray-1:#a09c90; --gray-soft:rgba(160,156,144,.14);
-  --mark:rgba(217,119,87,.30);
-  --shadow:0 1px 2px rgba(0,0,0,.35);
+  --bg:#1b1b1f; --bg-alt:#161618; --bg-soft:#202127; --bg-mute:#2b2b2f;
+  --divider:#2e2e32;
+  --t1:rgba(255,255,245,.86); --t2:rgba(235,235,245,.6); --t3:rgba(235,235,245,.38);
+  --brand-1:#a8b1ff; --brand-2:#5c73e7; --brand-soft:rgba(100,108,255,.16);
+  --green-1:#3dd68c; --green-soft:rgba(16,185,129,.16);
+  --yellow-1:#f9b44e; --yellow-soft:rgba(234,179,8,.16);
+  --red-1:#f66f81; --red-soft:rgba(244,63,94,.16);
+  --gray-1:#a4a8ae; --gray-soft:rgba(142,150,170,.16);
   color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -50,14 +40,14 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 :focus-visible{outline:2px solid var(--brand-1);outline-offset:2px;border-radius:4px}
 [hidden]{display:none!important}
 .nav{position:sticky;top:0;z-index:10;height:56px;background:var(--bg);border-bottom:1px solid var(--divider);display:flex;align-items:center;gap:12px;padding:0 24px}
-.nav .title{font-family:var(--font-serif);font-weight:600;font-size:17px;color:var(--t1)}
+.nav .title{font-weight:600;font-size:16px;color:var(--t1)}
 .nav .title:hover{text-decoration:none}
 .nav .sp{flex:1}
 .nav .back{font-size:14px;font-weight:500}
 .wrap{max-width:760px;margin:0 auto;padding:32px 24px 96px}
-h1{font-family:var(--font-serif);font-size:33px;line-height:1.32;margin:0 0 12px;font-weight:600;letter-spacing:0}
+h1{font-size:28px;line-height:1.3;margin:0 0 12px;font-weight:600;letter-spacing:-.01em}
 .lead{color:var(--t2);margin:0 0 28px}
-h2{font-family:var(--font-serif);font-size:19px;font-weight:500;margin:36px 0 4px;padding-top:24px;border-top:1px solid var(--divider)}
+h2{font-size:18px;font-weight:600;margin:36px 0 4px;padding-top:24px;border-top:1px solid var(--divider)}
 h2 small{font-weight:400;font-size:13px;color:var(--t3);margin-left:8px}
 .q{display:flex;align-items:center;gap:16px;padding:12px 0;border-top:1px solid var(--divider)}
 h2+.q{border-top:0}
@@ -70,6 +60,7 @@ h2+.q{border-top:0}
 .seg button[aria-pressed="true"]{background:var(--brand-soft);color:var(--brand-1);font-weight:600}
 .seg button.no[aria-pressed="true"]{background:var(--red-soft);color:var(--red-1)}
 .seg button.yes[aria-pressed="true"]{background:var(--green-soft);color:var(--green-1)}
+.profile-age{width:7em;padding:6px 10px;border:1px solid var(--divider);border-radius:8px;background:var(--bg-soft);color:var(--t1);font:inherit}
 .bar{position:sticky;bottom:0;margin-top:32px;padding:14px 0;background:var(--bg);border-top:1px solid var(--divider);display:flex;align-items:center;gap:16px}
 .bar .prog{flex:1;color:var(--t2);font-size:14px}
 .btn{border-radius:20px;padding:0 20px;line-height:38px;font-weight:600;font-size:14px;background:var(--brand-1);color:#fff;transition:background .2s}
@@ -78,19 +69,21 @@ html.dark .btn{color:#1b1b1f}
 .btn.ghost{background:var(--bg-mute);color:var(--t1)}
 .btn.ghost:hover{background:var(--divider)}
 .sum{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:8px 0 12px}
-.tile{background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:14px 16px}
+.tile{background:var(--bg-soft);border-radius:10px;padding:14px 16px}
 .tile b{display:block;font-size:26px;line-height:1.2;font-variant-numeric:tabular-nums}
 .tile span{font-size:13px;color:var(--t2)}
 .tile.r3 b{color:var(--brand-1)} .tile.r2 b{color:var(--green-1)}
-.note{font-size:13.5px;color:var(--t2);background:var(--bg-mute);border-radius:10px;padding:12px 16px;margin:20px 0}
+.note{font-size:13.5px;color:var(--t2);background:var(--bg-soft);border-radius:8px;padding:12px 16px;margin:20px 0}
 .note b{color:var(--t1)}
-.card{border:1px solid var(--divider);border-radius:12px;padding:16px 20px;margin:12px 0;background:var(--bg-elv);transition:border-color .25s,box-shadow .25s,background .25s}
-.card:hover{border-color:var(--gutter);box-shadow:var(--shadow)}
+.card{border:1px solid var(--divider);border-radius:12px;padding:16px 20px;margin:12px 0;background:var(--bg)}
 .card .h{display:flex;gap:10px;align-items:baseline}
 .card .h b{flex:1;font-size:16px;font-weight:600;line-height:1.5}
 .card .h a{flex:none;font-size:13px;white-space:nowrap}
 .card .human{margin:8px 0 10px;color:var(--t1)}
 .card .cost{font-size:13.5px;color:var(--t2);margin-top:6px}
+.card .caution{font-size:13.5px;color:var(--t2);background:var(--yellow-soft);border-radius:8px;padding:10px 12px;margin:10px 0}
+.card .caution summary{cursor:pointer;font-weight:600;color:var(--t1)}
+.card .caution[open] summary{margin-bottom:6px}
 .card .also{margin-top:10px;padding-top:10px;border-top:1px dashed var(--divider);font-size:13.5px;color:var(--t2)}
 .badges{display:flex;flex-wrap:wrap;gap:6px}
 .badge{display:inline-block;border-radius:10px;padding:0 10px;line-height:20px;font-size:12px;font-weight:600;white-space:nowrap}
@@ -117,7 +110,7 @@ html.dark .btn{color:#1b1b1f}
 .copy-tools{margin-top:12px}
 .copy-status{margin:8px 0 0;color:var(--t2);font-size:14px}
 .copy-tools label{display:block;margin:12px 0 4px;font-size:14px}
-.copy-tools textarea{display:block;width:100%;padding:12px;border:1px solid var(--divider);border-radius:8px;background:var(--bg-mute);color:var(--t1);font:inherit;font-size:14px;resize:vertical}
+.copy-tools textarea{display:block;width:100%;padding:12px;border:1px solid var(--divider);border-radius:8px;background:var(--bg-soft);color:var(--t1);font:inherit;font-size:14px;resize:vertical}
 .copy-tools button:disabled{cursor:wait;opacity:.65}
 .card{scroll-margin-top:72px}
 .done-list{color:var(--t2);font-size:14px;padding-left:20px}
@@ -125,7 +118,7 @@ html.dark .btn{color:#1b1b1f}
 @media (max-width:640px){
   .nav{padding:0 16px}
   .wrap{padding:24px 16px 80px}
-  h1{font-size:27px;line-height:1.35}
+  h1{font-size:24px}
   .q{flex-direction:column;align-items:stretch;gap:8px}
   .seg{align-self:flex-start}
   .sum{grid-template-columns:repeat(2,1fr)}
@@ -145,7 +138,7 @@ html.dark .btn{color:#1b1b1f}
   <section id="ask" hidden>
     <h1>生活自查</h1>
     <p class="lead">回答下面的问题，看看书里哪些事你还没做到。结果会告诉你哪一块漏得最多、先做哪几件、哪些一次办完就行。每条单独给出证据和出处，不汇总成一个分数。</p>
-    <div id="qs"></div>
+    <div id="qs"><div id="profile-qs"></div><div id="topic-qs"></div></div>
     <div class="bar">
       <span class="prog" id="prog"></span>
       <button class="btn ghost" id="reset" type="button">清空</button>
@@ -175,11 +168,13 @@ html.dark .btn{color:#1b1b1f}
    找不到就在控制台报错并跳过这题。
    when(p) 按基本情况决定这题问不问；also 是没做到时顺带列出的相关条目。 */
 const PROFILE = [
-  {id:'age', text:'你的年龄', opts:[['<30','30 岁以下'],['30','30–44'],['45','45–59'],['60','60 岁以上']]},
+  {id:'ageYears', text:'你的周岁年龄', type:'number'},
   {id:'sex', text:'你的性别', opts:[['m','男'],['f','女']]},
   {id:'kid', text:'家里有 4 岁以下的孩子吗', opts:[['y','有'],['n','没有']]},
 ];
-const ageAtLeast = (p, a) => ({'<30':20,'30':30,'45':45,'60':60})[p.age] >= a;
+const validAge = age => age !== undefined && age !== null && String(age).trim() !== ''
+  && Number.isInteger(Number(age)) && Number(age) >= 0 && Number(age) <= 120;
+const ageAtLeast = (p, a) => validAge(p.ageYears) && Number(p.ageYears) >= a;
 const GROUPS = [
   {name:'烟、酒和槟榔', mod:'身体', qs:[
     {sec:2, key:'戒烟，越早越好', text:'不抽烟，或者已经戒了', also:[{sec:2, key:'先去拿药'},{sec:2, key:'戒烟门诊'}]},
@@ -192,7 +187,7 @@ const GROUPS = [
     {sec:2, key:'全谷物', text:'主食里有一部分是糙米、燕麦、全麦这类全谷物'},
     {sec:2, key:'5 份', text:'每天吃够一斤左右的水果和蔬菜'},
     {sec:2, key:'坚果', text:'每天吃一小把坚果'},
-    {sec:2, key:'低钠盐', text:'家里做饭用低钠盐'},
+    {sec:2, key:'低钠盐', text:'家里做饭用低钠盐', hint:'有肾功能不全或正在吃保钾类药物的，换盐前先问医生；不适用可以跳过'},
     {sec:2, key:'滚烫', text:'热茶热汤放一放再喝，不喝滚烫的'},
     {sec:2, key:'抽油烟机', text:'炒菜时从开火到做完一直开着抽油烟机', hint:'不做饭可以跳过'},
   ]},
@@ -226,20 +221,20 @@ const GROUPS = [
   ]},
   {name:'检查和疫苗', mod:'身体', qs:[
     {sec:1, key:'量血压', text:'最近一年量过血压，高了在吃药控制'},
-    {sec:1, key:'空腹血糖', text:'查过空腹血糖', when:p => ageAtLeast(p,30)},
-    {sec:1, key:'乙肝两对半', text:'查过乙肝两对半，没抗体的打了疫苗'},
+    {sec:1, key:'空腹血糖', text:'查过空腹血糖', hint:'这条针对超重的人，不适用可以跳过', when:p => ageAtLeast(p,35)},
+    {sec:1, key:'乙肝两对半', rev:2, text:'核对过乙肝接种史，需要补种的已按医生建议接种', hint:'接种后抗体下降，不一定需要重打；拿不准可先查原条目'},
     {sec:1, key:'幽门螺杆菌', text:'查过幽门螺杆菌'},
     {sec:1, key:'HPV 疫苗', text:'打过 HPV 疫苗', when:p => p.sex === 'f'},
     {sec:1, key:'宫颈癌筛查', text:'做过宫颈癌筛查', when:p => p.sex === 'f' && ageAtLeast(p,30)},
-    {sec:1, key:'乳腺癌筛查', text:'近两年做过乳腺钼靶', when:p => p.sex === 'f' && ageAtLeast(p,45)},
+    {sec:1, key:'乳腺癌筛查', text:'近两年做过乳腺钼靶', when:p => p.sex === 'f' && ageAtLeast(p,40)},
     {sec:1, key:'结直肠癌筛查', text:'做过结直肠癌筛查（大便潜血或肠镜）', when:p => ageAtLeast(p,45)},
     {sec:1, key:'流感疫苗', text:'每年打流感疫苗', when:p => ageAtLeast(p,60)},
-    {sec:1, key:'带状疱疹疫苗', text:'打过带状疱疹疫苗', when:p => ageAtLeast(p,60)},
-    {sec:1, key:'肺炎球菌疫苗', text:'打过肺炎球菌疫苗', when:p => ageAtLeast(p,60)},
-    {sec:1, key:'骨密度', text:'做过骨密度检查', when:p => p.sex === 'f' && ageAtLeast(p,60)},
+    {sec:1, key:'带状疱疹疫苗', text:'打过带状疱疹疫苗', when:p => ageAtLeast(p,50)},
+    {sec:1, key:'肺炎球菌疫苗', text:'打过肺炎球菌疫苗', when:p => ageAtLeast(p,65)},
+    {sec:1, key:'骨密度', text:'做过骨密度检查', when:p => p.sex === 'f' && ageAtLeast(p,65)},
   ]},
   {name:'急救常识', mod:'急救常识', qs:[
-    {sec:13, key:'有人倒地没呼吸', text:'看到有人倒地没呼吸，知道要立刻用力按压胸口，并让旁人找 AED'},
+    {sec:13, key:'叫不应、没正常呼吸', text:'看到有人倒地、叫不应、没正常呼吸，知道要立刻用力按压胸口，并让旁人找 AED'},
     {sec:13, key:'突然嘴歪', text:'知道突然嘴歪、一侧胳膊没劲要直接打 120，不自己开车去'},
     {sec:13, key:'胸口压着疼', text:'知道胸口压着疼超过 15 分钟不缓解要打 120'},
     {sec:13, key:'有人噎住', text:'会给噎住的人做拍背加腹部冲击'},
@@ -294,7 +289,7 @@ function parse(md){
     if ((m = /^### (\d+)\. (.+)$/.exec(line)) && sec) { e = {sec, n:+m[1], title:m[2].trim(), human:'', cost:'', grade:'', note:''}; out.push(e); continue; }
     if (!e) continue;
     if ((m = /^\x3c!--\s*成本标签:\s*(.*?)\s*-->/.exec(line))){
-      for (const kv of m[1].split(/\s+/)){ const [k,v] = kv.split('='); e[{'钱':'money','时间':'time','毅力':'will','收益':'level','口径':'lens'}[k]] = v; }
+      for (const kv of m[1].split(/\s+/)){ const [k,v] = kv.split('='); const p = {'钱':'money','时间':'time','毅力':'will','收益':'level','口径':'lens'}[k]; if (p) e[p] = v; }
     }
     else if ((m = /^- 说人话：(.*)$/.exec(line))) e.human = m[1];
     else if ((m = /^- 成本：(.*)$/.exec(line))) e.cost = m[1];
@@ -325,8 +320,10 @@ let ans = {};
 try { ans = JSON.parse(localStorage.getItem(STORE) || '{}'); } catch (e) {}
 const save = () => { try { localStorage.setItem(STORE, JSON.stringify(ans)); } catch (e) {} };
 const profile = () => Object.fromEntries(PROFILE.map(p => [p.id, ans['p:'+p.id]]));
-const profileDone = () => PROFILE.every(p => ans['p:'+p.id]);
-const qid = q => q.sec + ':' + q.key;
+// 使用新字段 ageYears，旧版年龄段答案不会被当成实际年龄；其他答案保留。
+const profileDone = () => PROFILE.every(p => p.type === 'number'
+  ? validAge(ans['p:'+p.id]) : p.opts.some(([v]) => v === ans['p:'+p.id]));
+const qid = q => q.sec + ':' + q.key + (q.rev ? ':v' + q.rev : '');
 const shown = (q, p) => q.entry && modOn(q.g.mod) && (!q.when || (profileDone() && q.when(p)));
 const activeQs = () => { const p = profile(); return GROUPS.flatMap(g => g.qs).filter(q => shown(q, p)); };
 
@@ -336,19 +333,26 @@ function seg(name, opts, cur){
 }
 const YN = [['y','做到了','yes'],['n','没做到','no'],['s','跳过']];
 
-function renderAsk(){
+function renderAsk(updateProfile = true){
   const p = profile();
   let h = `<h2 style="border-top:0;padding-top:0;margin-top:0">基本情况<small>决定问哪些题</small></h2>`;
-  for (const f of PROFILE) h += `<div class="q"><div class="txt">${f.text}</div>${seg('p:'+f.id, f.opts, ans['p:'+f.id])}</div>`;
+  for (const f of PROFILE) {
+    const control = f.type === 'number'
+      ? `<input class="profile-age" id="profile-age" type="number" inputmode="numeric" min="0" max="120" step="1" data-k="p:${f.id}" aria-label="${f.text}" value="${esc(String(ans['p:'+f.id] ?? ''))}">`
+      : seg('p:'+f.id, f.opts, ans['p:'+f.id]);
+    h += `<div class="q"><div class="txt">${f.text}</div>${control}</div>`;
+  }
   h += `<div class="q"><div class="txt">想查哪几块<small>点一下取消，不查的整块不出题</small></div><div class="mods">`
     + MODS.map(m => `<button type="button" data-mod="${m}" aria-pressed="${modOn(m)}">${m}</button>`).join('') + `</div></div>`;
+  if (updateProfile) document.getElementById('profile-qs').innerHTML = h;
+  h = '';
   for (const g of GROUPS){
     const qs = g.qs.filter(q => shown(q, p));
     if (!qs.length) continue;
     h += `<h2>${g.name}</h2>`;
     for (const q of qs) h += `<div class="q"><div class="txt">${esc(q.text)}${q.hint ? `<small>${esc(q.hint)}</small>` : ''}</div>${seg(qid(q), YN, ans[qid(q)])}</div>`;
   }
-  document.getElementById('qs').innerHTML = h;
+  document.getElementById('topic-qs').innerHTML = h;
   const qs = activeQs(), n = qs.filter(q => ans[qid(q)]).length;
   document.getElementById('prog').textContent = profileDone() ? `已答 ${n} / ${qs.length} 题` : '先填基本情况';
 }
@@ -361,6 +365,7 @@ function card(e, also){
     `<a href="./#e-${a.sec}-${a.n}">${esc(plain(a.title))}</a>`).join('；') + `</div>` : '';
   return `<div class="card" id="c-${e.sec}-${e.n}">
     <div class="h"><b>${esc(plain(e.title))}</b><a href="./#e-${e.sec}-${e.n}">第 ${e.sec} 节第 ${e.n} 条 →</a></div>
+    ${e.note ? `<details class="caution"><summary>适用条件与注意事项</summary>${esc(plain(e.note))}</details>` : ''}
     ${e.human ? `<div class="human">${esc(plain(e.human))}</div>` : ''}
     <div class="badges"><span class="badge ${r}">性价比 ${e.ratio}</span><span class="badge ${e.grade}">证据 ${e.grade} 级</span><span class="badge plain">收益 ${e.level}</span>${lens}${e.dispute ? '<span class="badge warn">有争议</span>' : ''}</div>
     <div class="cost">要花的：${esc(plain(e.cost))}</div>${alsoH}
@@ -432,7 +437,8 @@ function renderOut(){
     `- [ ] ${plain(e.title)}\n`
     + `  性价比${e.ratio}，证据 ${e.grade} 级，${PILES.find(p => p.will === e.will)?.name ?? ''}${e.dispute ? '，有争议（先看原条目的备注）' : ''}\n`
     + `  要花的：${plain(e.cost)}\n`
-    + `  https://rensheng.21212121.xyz/#e-${e.sec}-${e.n}`).join('\n\n');
+    + (e.note ? `  适用条件与注意事项：${plain(e.note)}\n` : '')
+    + `  https://eternity4719.github.io/HowToLiveBetter/#e-${e.sec}-${e.n}`).join('\n\n');
   document.getElementById('done').innerHTML = yes.map(q =>
     `<li><a href="./#e-${q.entry.sec}-${q.entry.n}">${esc(plain(q.entry.title))}</a></li>`).join('');
   document.getElementById('done-h').hidden = !yes.length;
@@ -455,6 +461,7 @@ document.getElementById('todo').addEventListener('click', async ev => {
     await navigator.clipboard.writeText(text.value);
     if (b.isConnected && !document.getElementById('out').hidden) status.textContent = '已复制，可以粘贴到备忘录或待办应用。';
   } catch (err) {
+    // 等待剪贴板权限时可能已经返回改答案，不把焦点拉回旧结果。
     if (!b.isConnected || document.getElementById('out').hidden) return;
     fallback.hidden = false;
     status.textContent = '无法自动复制，请在下方手动复制清单。';
@@ -473,8 +480,14 @@ document.getElementById('qs').addEventListener('click', ev => {
   ans[b.dataset.k] = ans[b.dataset.k] === b.dataset.v ? undefined : b.dataset.v;
   save(); renderAsk();
 });
+document.getElementById('qs').addEventListener('input', ev => {
+  if (!ev.target.matches('input[data-k="p:ageYears"]')) return;
+  ans['p:ageYears'] = ev.target.value;
+  // 保留年龄输入框和基本情况按钮，避免失焦重绘吞掉紧接着的点击。
+  save(); renderAsk(false);
+});
 document.getElementById('go').addEventListener('click', () => {
-  if (!profileDone()) { document.getElementById('prog').textContent = '先把基本情况三题填上'; return; }
+  if (!profileDone()) { document.getElementById('prog').textContent = '请填完整基本情况，年龄填 0 到 120 的整数'; return; }
   renderOut(); show('out');
 });
 document.getElementById('back').addEventListener('click', () => show('ask'));
