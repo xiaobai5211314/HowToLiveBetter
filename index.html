@@ -34,35 +34,36 @@
 <script>(function(){try{var s=localStorage.getItem('theme');var d=s?s==='dark':matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark')}catch(e){}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#ffffff; --bg-alt:#f6f6f7; --bg-soft:#f6f6f7; --bg-mute:#f1f1f2; --bg-elv:#ffffff;
-  --divider:#e2e2e3; --gutter:#e2e2e3;
-  --t1:rgba(60,60,67,1); --t2:rgba(60,60,67,.78); --t3:rgba(60,60,67,.56);
-  --brand-1:#3451b2; --brand-2:#3a5ccc; --brand-3:#5672cd; --brand-soft:rgba(100,108,255,.14);
-  --green-1:#18794e; --green-soft:rgba(16,185,129,.14);
-  --yellow-1:#915930; --yellow-soft:rgba(234,179,8,.14);
-  --red-1:#b8272c; --red-soft:rgba(244,63,94,.14);
-  --gray-1:#565a5f; --gray-soft:rgba(142,150,170,.14);
-  --mark:rgba(234,179,8,.32);
-  --shadow:0 1px 2px rgba(0,0,0,.04),0 1px 2px rgba(0,0,0,.06);
+  --bg:#f5f4ed; --bg-alt:#edebe1; --bg-soft:#faf9f5; --bg-mute:#e8e6dc; --bg-elv:#faf9f5;
+  --divider:#e0ddcf; --gutter:#e8e6dc;
+  --t1:#141413; --t2:#5e5d59; --t3:#87867f;
+  --brand-1:#c96442; --brand-2:#b4573a; --brand-3:#d97757; --brand-soft:rgba(201,100,66,.11);
+  --green-1:#4d7c5f; --green-soft:rgba(77,124,95,.13);
+  --yellow-1:#96602e; --yellow-soft:rgba(201,140,80,.15);
+  --red-1:#b53333; --red-soft:rgba(181,51,51,.10);
+  --gray-1:#5e5d59; --gray-soft:rgba(139,134,120,.13);
+  --mark:rgba(217,119,87,.28);
+  --shadow:0 1px 2px rgba(40,35,25,.05),0 4px 24px rgba(40,35,25,.06);
   --font:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+  --font-serif:"Noto Serif SC","Source Han Serif SC","Songti SC",Georgia,"Times New Roman",serif;
   --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
   --nav-h:64px; --side-w:272px;
   color-scheme:light;
 }
 html.dark{
-  --bg:#1b1b1f; --bg-alt:#161618; --bg-soft:#202127; --bg-mute:#2b2b2f; --bg-elv:#202127;
-  --divider:#2e2e32; --gutter:#000000;
-  --t1:rgba(255,255,245,.86); --t2:rgba(235,235,245,.6); --t3:rgba(235,235,245,.38);
-  --brand-1:#a8b1ff; --brand-2:#5c73e7; --brand-3:#3e63dd; --brand-soft:rgba(100,108,255,.16);
-  --green-1:#3dd68c; --green-soft:rgba(16,185,129,.16);
-  --yellow-1:#f9b44e; --yellow-soft:rgba(234,179,8,.16);
-  --red-1:#f66f81; --red-soft:rgba(244,63,94,.16);
-  --gray-1:#a4a8ae; --gray-soft:rgba(142,150,170,.16);
-  --mark:rgba(234,179,8,.28);
-  --shadow:0 1px 2px rgba(0,0,0,.3);
+  --bg:#141413; --bg-alt:#1a1a17; --bg-soft:#1f1f1b; --bg-mute:#2b2b27; --bg-elv:#232320;
+  --divider:#30302e; --gutter:#000000;
+  --t1:#faf9f5; --t2:#b0aea5; --t3:#87867f;
+  --brand-1:#d97757; --brand-2:#e08a6d; --brand-3:#c96442; --brand-soft:rgba(217,119,87,.16);
+  --green-1:#8fbf9d; --green-soft:rgba(143,191,157,.14);
+  --yellow-1:#d9a066; --yellow-soft:rgba(217,160,102,.15);
+  --red-1:#e0837c; --red-soft:rgba(224,131,124,.14);
+  --gray-1:#a09c90; --gray-soft:rgba(160,156,144,.14);
+  --mark:rgba(217,119,87,.30);
+  --shadow:0 1px 2px rgba(0,0,0,.35);
   color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -75,6 +76,7 @@ a{color:var(--brand-1);text-decoration:none;transition:color .25s}
 a:hover{color:var(--brand-2);text-decoration:underline;text-underline-offset:2px}
 button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
 :focus-visible{outline:2px solid var(--brand-1);outline-offset:2px;border-radius:4px}
+::selection{background:var(--mark)}
 mark{background:var(--mark);color:inherit;border-radius:2px;padding:0 1px}
 /* 正文里的「第 X 条」交叉引用：点一下就地看那条说什么，不用自己翻过去 */
 .xref{color:var(--brand-1);cursor:pointer;border-bottom:1px dashed currentColor}
@@ -101,14 +103,14 @@ mark{background:var(--mark);color:inherit;border-radius:2px;padding:0 1px}
 /* nav */
 .nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:30;background:var(--bg);border-bottom:1px solid var(--divider)}
 .nav-in{height:100%;display:flex;align-items:center;gap:16px;padding:0 24px}
-.title{display:flex;align-items:center;gap:10px;font-weight:600;font-size:16px;color:var(--t1);white-space:nowrap}
+.title{display:flex;align-items:center;gap:10px;font-family:var(--font-serif);font-weight:600;font-size:17px;color:var(--t1);white-space:nowrap}
 .title:hover{text-decoration:none;color:var(--t1)}
-.logo{width:24px;height:24px;border-radius:6px;background:linear-gradient(135deg,var(--brand-3),var(--brand-1));display:grid;place-items:center;color:#fff;font-size:12px;font-weight:700}
+.logo{width:24px;height:24px;border-radius:8px;background:var(--brand-1);display:grid;place-items:center;color:#faf9f5;font-size:12px;font-weight:700}
 .logo svg{width:15px;height:15px}
 .search{flex:1;max-width:520px;margin-left:auto;position:relative}
-.search input{width:100%;height:40px;padding:0 44px 0 40px;border-radius:8px;border:1px solid transparent;background:var(--bg-alt);color:var(--t1);font:inherit;font-size:14px;transition:border-color .25s,background .25s}
+.search input{width:100%;height:40px;padding:0 44px 0 40px;border-radius:10px;border:1px solid transparent;background:var(--bg-mute);color:var(--t1);font:inherit;font-size:14px;transition:border-color .25s,background .25s,box-shadow .25s}
 .search input:hover{border-color:var(--divider)}
-.search input:focus{outline:0;border-color:var(--brand-1);background:var(--bg)}
+.search input:focus{outline:0;border-color:var(--brand-3);background:var(--bg-elv);box-shadow:0 0 0 3px var(--brand-soft)}
 .search input::placeholder{color:var(--t3)}
 .search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:18px;height:18px;fill:none;stroke:var(--t3);stroke-width:2;pointer-events:none}
 .search kbd{position:absolute;right:10px;top:50%;transform:translateY(-50%);font:500 11px/1 var(--font);color:var(--t3);border:1px solid var(--divider);border-radius:4px;padding:3px 6px;background:var(--bg-elv);pointer-events:none}
@@ -166,19 +168,6 @@ html.dark .switch .sun{display:none} html.dark .switch .moon{display:block}
 .doc-links{margin-top:8px;font-size:14px;color:var(--t3)}
 .doc-links a{margin-right:4px}
 .hint{font-size:12px;color:var(--t3);line-height:1.6;margin-top:16px}
-/* 侧栏底部广告位：图片换成新广告主的即可，尺寸按 2:1 出图，源文件在 tools/ad-*.html */
-.ad{margin-top:26px}
-.ad img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--divider)}
-/* 赞赏：侧栏底部一行字，点开才出二维码，图用 loading=lazy，不点不下载 */
-.tip-open{margin-top:10px;padding:0;border:0;background:none;font:inherit;font-size:12px;color:var(--t3);cursor:pointer}
-.tip-open:hover{color:var(--brand-1)}
-#tip-mask{position:fixed;inset:0;z-index:70;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;padding:24px}
-#tip-mask[hidden]{display:none}
-#tip-box{background:var(--bg);border:1px solid var(--divider);border-radius:12px;box-shadow:var(--shadow);width:min(360px,100%);padding:16px;text-align:center}
-#tip-box img{display:block;width:100%;height:auto;border-radius:8px}
-#tip-box p{margin:12px 0;font-size:13px;line-height:1.6;color:var(--t2)}
-#tip-box button{border:1px solid var(--divider);background:var(--bg-soft);color:var(--t2);border-radius:6px;padding:3px 14px;font-size:13px;cursor:pointer;font-family:inherit}
-#tip-box button:hover{color:var(--t1);background:var(--bg-mute)}
 .hint p{margin:4px 0}
 .backdrop{display:none}
 
@@ -186,21 +175,21 @@ html.dark .switch .sun{display:none} html.dark .switch .moon{display:block}
 .content{padding:calc(var(--nav-h) + 40px) 48px 128px calc(var(--side-w) + 48px)}
 .doc{max-width:900px;margin:0 auto}
 .doc-head{margin-bottom:28px}
-.doc-head h1{font-size:32px;line-height:40px;font-weight:700;letter-spacing:-.02em;margin:0 0 8px}
+.doc-head h1{font-family:var(--font-serif);font-size:33px;line-height:1.32;font-weight:600;letter-spacing:0;margin:0 0 10px}
 .doc-head p{margin:0;color:var(--t2);font-size:16px}
 .doc-head .stat{color:var(--t3);font-size:14px;margin-top:6px}
 .doc-head .stat b{color:var(--brand-1);font-weight:600}
 .sec-block{margin-top:40px}
 .sec-h{display:flex;align-items:baseline;gap:12px;padding-top:24px;border-top:1px solid var(--divider);margin-bottom:8px}
-.sec-h h2{font-size:24px;line-height:32px;font-weight:600;letter-spacing:-.02em;margin:0}
+.sec-h h2{font-family:var(--font-serif);font-size:25px;line-height:1.4;font-weight:500;letter-spacing:0;margin:0}
 .sec-h .shown{margin-left:auto;font-size:13px;color:var(--t3);font-variant-numeric:tabular-nums}
 .intro{margin:0 0 12px;color:var(--t2);font-size:14px;max-width:72ch}
 .intro:last-of-type{margin-bottom:20px}
 
-.card{background:var(--bg-soft);border:1px solid transparent;border-radius:12px;padding:22px 24px 18px;margin-bottom:16px;transition:border-color .25s,background .25s;content-visibility:auto;contain-intrinsic-size:300px;contain-intrinsic-size:auto 300px}
-.card:hover{border-color:var(--divider)}
+.card{background:var(--bg-elv);border:1px solid var(--divider);border-radius:12px;padding:22px 24px 18px;margin-bottom:16px;transition:border-color .25s,box-shadow .25s,background .25s;content-visibility:auto;contain-intrinsic-size:300px;contain-intrinsic-size:auto 300px}
+.card:hover{border-color:var(--gutter);box-shadow:var(--shadow)}
 .card-h{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px}
-.card-h h3{margin:0;font-size:18px;line-height:28px;font-weight:600;letter-spacing:-.01em;flex:1;min-width:0;overflow-wrap:anywhere}
+.card-h h3{margin:0;font-family:var(--font-serif);font-size:18px;line-height:1.55;font-weight:500;letter-spacing:0;flex:1;min-width:0;overflow-wrap:anywhere}
 .card-h .idx{color:var(--t3);font-size:14px;line-height:28px;font-variant-numeric:tabular-nums;min-width:22px}
 .card-h .anchor{opacity:0;color:var(--brand-1);font-size:16px;line-height:28px;font-weight:500;transition:opacity .2s}
 .card:hover .anchor,.anchor:focus-visible{opacity:1}
@@ -218,7 +207,7 @@ html.dark .switch .sun{display:none} html.dark .switch .moon{display:block}
 .badge.r1{background:var(--gray-soft);color:var(--gray-1)}
 .badge.upd{background:none;box-shadow:inset 0 0 0 1px var(--brand-3);color:var(--brand-1);font-weight:500}
 .chips + .chips{margin-top:6px}
-.human{margin:0 0 14px;padding:10px 14px;border-left:2px solid var(--brand-1);background:var(--brand-soft);border-radius:0 6px 6px 0;font-size:15px;line-height:1.75;color:var(--t1);overflow-wrap:anywhere}
+.human{margin:0 0 14px;padding:12px 16px;background:var(--bg-mute);border-radius:10px;font-size:15px;line-height:1.8;color:var(--t1);overflow-wrap:anywhere}
 .rows{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:14px;line-height:1.75}
 .rows .k{color:var(--t3);font-weight:500;font-size:13px;line-height:1.75;padding-top:1px}
 .rows .v{color:var(--t1);min-width:0;overflow-wrap:anywhere}
@@ -263,7 +252,7 @@ abbr.term:hover{border-bottom-color:var(--brand-1);color:var(--brand-1)}
 .dm-toc a.lv3{padding-left:22px;font-size:12.5px;color:var(--t3)}
 .dm-toc a.on{color:var(--brand-1);background:var(--bg-mute);font-weight:500}
 .dm-doc{position:relative;flex:1;min-width:0;overflow-y:auto;overscroll-behavior:contain;padding:20px 30px 64px;line-height:1.8}
-.dm-doc h2{font-size:17px;font-weight:600;margin:26px 0 10px;padding-top:6px;border-top:1px solid var(--divider)}
+.dm-doc h2{font-family:var(--font-serif);font-size:19px;font-weight:500;margin:26px 0 10px;padding-top:6px;border-top:1px solid var(--divider)}
 .dm-doc h2:first-child{border-top:0;margin-top:4px}
 .dm-doc h3{font-size:14.5px;font-weight:600;margin:18px 0 8px;color:var(--t1)}
 .dm-doc p{margin:0 0 12px;color:var(--t2)}
@@ -317,9 +306,9 @@ abbr.term:hover{border-bottom-color:var(--brand-1);color:var(--brand-1)}
   .backdrop{display:block;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:15;opacity:0;pointer-events:none;transition:opacity .25s}
   .backdrop.on{opacity:1;pointer-events:auto}
   .content{padding:calc(var(--nav-h) + 24px) 20px 96px}
-  .doc-head h1{font-size:26px;line-height:34px}
+  .doc-head h1{font-size:27px;line-height:1.35}
   .card{padding:18px 16px 14px;border-radius:10px}
-  .card-h h3{font-size:16px;line-height:24px}
+  .card-h h3{font-size:17px;line-height:1.55}
   .card-h .idx{line-height:24px}
   .human{padding:9px 12px;font-size:14px;margin-bottom:12px}
   .rows{grid-template-columns:1fr;gap:4px}
@@ -330,14 +319,6 @@ abbr.term:hover{border-bottom-color:var(--brand-1);color:var(--brand-1)}
 </style>
 
 <!-- ga:start 这两行注释是离线构建的剥离标记（tools/offline/build.mjs），别删 -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NTPGXCLMP6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-NTPGXCLMP6');
-</script>
 <!-- ga:end -->
 </head>
 <body>
@@ -346,7 +327,7 @@ abbr.term:hover{border-bottom-color:var(--brand-1);color:var(--brand-1)}
   <div style="max-width:760px;margin:0 auto;padding:32px 20px;line-height:1.7">
     <h1>高性价比人生指南</h1>
     <p>用最少的钱、时间、精力和毅力，换回最多的寿命、金钱、时间和人身自由。全书 34 节 767 条，每条写明成本、收益、证据等级和原始出处。收益按受益人分四档算：你自己、配偶与直系亲属、朋友同事、陌生人，档次越低回报期望越小、风险越要写清。</p>
-    <p>本页的筛选功能需要 JavaScript。正文可直接阅读：<a href="README.md">README.md</a> 里的目录，正文在 <a href="book/">book/</a>。</p>
+    <p>本页的筛选功能需要 JavaScript。正文可直接阅读：<a href="README.md">README.md</a> 里的目录，正文在 <a href="https://github.com/xiaobai5211314/HowToLiveBetter/tree/main/book">book/</a>。</p>
     <ol>
       <li>不要早死：交通、火灾、燃气、毒蘑菇、溺水、跌落、疫苗、癌症筛查、心理危机、家庭应急装备</li>
       <li>不要慢慢死：烟酒、运动、睡眠、饮食、久坐</li>
@@ -491,12 +472,7 @@ abbr.term:hover{border-bottom-color:var(--brand-1);color:var(--brand-1)}
   <div class="hint">
     <p>章节一次只看一个，成本和等级可多选。同一组多选是「或」，不同组之间是「且」。「我的情况」勾的是你符合哪几样，没标人群的条目始终显示。</p>
     <p>每节内的先后顺序不代表性价比高低，想挑划算的就用上面的性价比筛选。</p>
-    <p>正文与标签来自仓库 <a href="book/">book/</a> 下的 34 个文件，改正文即改这里。</p>
-  </div>
-  <div class="group ad">
-    <div class="gt">广告</div>
-    <a href="https://4.mcyyy.com" target="_blank" rel="noopener"><img src="ads/mcyyy-side.webp" alt="永恒世界 Minecraft 服务器，游戏地址 1.mcyyy.com" width="624" height="312" loading="lazy"></a>
-    <button type="button" class="tip-open" id="tip-open">觉得有用？请作者喝杯咖啡</button>
+    <p>正文与标签来自仓库 <a href="https://github.com/xiaobai5211314/HowToLiveBetter/tree/main/book">book/</a> 下的 34 个文件，改正文即改这里。</p>
   </div>
 </aside>
 
@@ -522,7 +498,7 @@ abbr.term:hover{border-bottom-color:var(--brand-1);color:var(--brand-1)}
         <div><button id="reset2">清空筛选</button></div>
       </div>
     </div>
-    <div class="foot">数字口径以条目内标注为准：第 1、2 节是 ACM 或特定死因，第 3、4 节是精力/时间，第 5 节是金钱，第 7 节是金钱与保障，第 8、9 节是金钱与人身自由，互不换算。来源核实过程见 <a href="https://github.com/xiaobai5211314/HowToLiveBetter/tree/main/docs/%E6%A0%B8%E5%AE%9E%E8%AE%B0%E5%BD%95">docs/核实记录</a>。正文按 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans">CC BY 4.0</a> 发布，转载改编请署名并附原文链接。</div>
+    <div class="foot">数字口径以条目内标注为准：第 1、2 节是 ACM 或特定死因，第 3、4 节是精力/时间，第 5 节是金钱，第 7 节是金钱与保障，第 8、9 节是金钱与人身自由，互不换算。来源核实过程见 <a href="https://github.com/xiaobai5211314/HowToLiveBetter/tree/main/docs/%E6%A0%B8%E5%AE%9E%E8%AE%B0%E5%BD%95">docs/核实记录</a>。正文原作《高性价比人生指南》（原作者 <a href="https://github.com/eternity4719/HowToLiveBetter">eternity4719</a>），按 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans">CC BY 4.0</a> 授权；本站在原作基础上删改。</div>
   </div>
 </main>
 
@@ -533,13 +509,6 @@ abbr.term:hover{border-bottom-color:var(--brand-1);color:var(--brand-1)}
   </div>
 </div>
 
-<div id="tip-mask" hidden>
-  <div id="tip-box" role="dialog" aria-modal="true" aria-label="微信赞赏码">
-    <img src="ads/wechat-reward.png" alt="微信赞赏码" width="1037" height="1037" loading="lazy">
-    <p>用微信扫一扫，给不给都行，不影响任何内容。<br>在手机上看的话，先截图，再用微信扫一扫从相册选图。</p>
-    <button type="button" id="tip-x">关闭</button>
-  </div>
-</div>
 
 <div id="xref-pop" hidden>
   <div class="xp-h"><b></b><button class="xp-go" type="button">跳过去</button><button class="xp-x" type="button" aria-label="关闭">✕</button></div>
@@ -1274,16 +1243,6 @@ function apply(){
 }
 
 /* ---------- 事件 ---------- */
-// 离线单文件会把 GA 片段整段剥掉，这里没有 gtag 也要能跑
-const track = (name, params) => { if (typeof gtag === 'function') gtag('event', name, params); };
-// 搜索词上报：搜了没命中的词就是该补的条目。results 要在 GA 后台注册成自定义指标才看得到。
-let SENT_Q = '';
-function reportSearch(){
-  const q = state.q;
-  if (q.length < 2 || q === SENT_Q) return;
-  SENT_Q = q;
-  track('search', { search_term: q, results: Number(document.getElementById('cnt').textContent) || 0 });
-}
 function wire(){
   const sb = document.getElementById('sidebar'), bd = document.getElementById('backdrop'), mb = document.getElementById('menu');
   const setMenu = (on) => { sb.classList.toggle('open', on); bd.classList.toggle('on', on); mb.setAttribute('aria-expanded', String(on)); };
@@ -1323,10 +1282,8 @@ function wire(){
   });
   document.getElementById('f-dispute').addEventListener('change', e => { state.dispute = e.target.checked; apply(); toTop(); });
   document.getElementById('f-todo').addEventListener('change', e => { state.todo = e.target.checked; apply(); toTop(); });
-  // 上报比筛选晚得多：按 120ms 那一拍发，「高血压」会被当成「高」「高血」「高血压」三次搜索
-  let tm, qtm; document.getElementById('q').addEventListener('input', e => {
+  let tm; document.getElementById('q').addEventListener('input', e => {
     clearTimeout(tm); tm = setTimeout(() => { state.q = e.target.value.trim(); apply(); }, 120);
-    clearTimeout(qtm); qtm = setTimeout(reportSearch, 2000);
   });
   const reset = () => { state.q=''; for (const d of DIMS) state[d].clear(); state.dispute=false; state.todo=false; apply(); toTop(); };
   // 页头「最近 N 天更新」：点了就只看这一类，别的筛选清掉，免得读者以为没几条
@@ -1556,7 +1513,6 @@ async function dmOpen(path, from){
     DM.toc.appendChild(a);
   }
   dmSpy();
-  if (window.gtag) gtag('event', 'doc_open', { doc: path });
 }
 document.addEventListener('click', ev => {
   const a = ev.target.closest?.('a[href]');
@@ -1579,21 +1535,6 @@ document.addEventListener('keydown', ev => {
   dmClose();
 }, true);
 
-/* ---------- 赞赏码弹窗 ---------- */
-const TIP = document.getElementById('tip-mask');
-function tipClose(){
-  if (TIP.hidden) return;
-  TIP.hidden = true;
-  document.getElementById('tip-open').focus();
-}
-document.getElementById('tip-open').addEventListener('click', () => {
-  TIP.hidden = false;
-  document.getElementById('tip-x').focus();
-  if (window.gtag) gtag('event', 'tip_open');
-});
-document.getElementById('tip-x').addEventListener('click', tipClose);
-TIP.addEventListener('click', ev => { if (ev.target === TIP) tipClose(); });
-document.addEventListener('keydown', ev => { if (ev.key === 'Escape' && !TIP.hidden){ ev.stopPropagation(); tipClose(); } }, true);
 
 (async function init(){
   const status = document.getElementById('status');

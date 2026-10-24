@@ -4,12 +4,13 @@
 《高性价比人生指南》上游开源仓库同步与自动更新工具
 用法：python tools/sync_upstream.py
 功能：
-1. 检查并拉取原作者 upstream (eternity4719/HowToLiveBetter) 的最新修改
+1. 检查并拉取原作者 upstream (eternity4719/HowToLiveBetter) 的最新修改与新增内容
 2. 同步正文章节、文档、自查工具及更新记录
-3. 自动注入自定义独立域名与仓库配置
-4. 重新计算全书字数、条目与性价比统计数据 (sync-stats)
-5. 提交并推送至 origin (xiaobai5211314/HowToLiveBetter)
-6. 自动触发 GitHub Actions 部署至生产服务器 (rensheng.21212121.xyz)
+3. 自动执行 patch_site.py (去广告、去除打赏弹窗、去统计上报、注入个人域名与仓库)
+4. 自动执行 restyle_site.py (应用 Claude Code 官方暖羊皮纸 + 陶土橙 + 衬线排版 UI 主题)
+5. 重新计算全书字数、条目与性价比统计数据 (sync-stats)
+6. 提交并推送至 origin (xiaobai5211314/HowToLiveBetter)
+7. 自动触发 GitHub Actions 部署至生产服务器 (rensheng.21212121.xyz)
 """
 
 import subprocess
@@ -29,20 +30,8 @@ def run(cmd, check=True):
         sys.exit(res.returncode)
     return res
 
-def patch_files():
-    # 1. 注入 index.html
-    index_path = os.path.join(BASE_DIR, "index.html")
-    if os.path.exists(index_path):
-        with open(index_path, "r", encoding="utf-8") as f:
-            content = f.read()
-        content = content.replace("https://eternity4719.github.io/HowToLiveBetter/", "https://rensheng.21212121.xyz/")
-        content = content.replace("https://eternity4719.github.io/HowToLiveBetter", "https://rensheng.21212121.xyz/")
-        content = content.replace("https://github.com/eternity4719/HowToLiveBetter", "https://github.com/xiaobai5211314/HowToLiveBetter")
-        with open(index_path, "w", encoding="utf-8") as f:
-            f.write(content)
-        print("[*] 已注入独立域名 rensheng.21212121.xyz 与个人仓库地址")
-
-    # 2. 修复 updates.mjs 基准提交回溯
+def patch_and_restyle():
+    # 1. 修复 updates.mjs 基准提交回溯
     updates_path = os.path.join(BASE_DIR, "tools", "updates.mjs")
     if os.path.exists(updates_path):
         with open(updates_path, "r", encoding="utf-8") as f:
@@ -55,11 +44,21 @@ if (!base) { try { base = git(['rev-list', '--max-parents=0', 'HEAD']).toString(
         if target in c:
             c = c.replace(target, replacement)
         else:
-            # 兼容不同换行符
             c = c.replace(target.replace("\n", "\r\n"), replacement.replace("\n", "\r\n"))
         with open(updates_path, "w", encoding="utf-8") as f:
             f.write(c)
-        print("[*] 已优化 tools/updates.mjs 历史基准提交回溯逻辑")
+
+    # 2. 运行 patch_site.py (去广告、去赞赏弹窗、去追踪、改域名)
+    patch_script = os.path.join(BASE_DIR, "patch_site.py")
+    if os.path.exists(patch_script):
+        print("[*] 正在执行 patch_site.py (去广告、去赞赏、改域名)...")
+        run(f'"{sys.executable}" patch_site.py .')
+
+    # 3. 运行 restyle_site.py (应用 Claude Code 官网暖羊皮纸设计语言)
+    restyle_script = os.path.join(BASE_DIR, "restyle_site.py")
+    if os.path.exists(restyle_script):
+        print("[*] 正在执行 restyle_site.py (应用 Claude Code UI 暖羊皮纸主题)...")
+        run(f'"{sys.executable}" restyle_site.py .')
 
 def main():
     print("=" * 60)
@@ -80,12 +79,14 @@ def main():
     print("[*] 正在检出上游最新的正文、文档、自查工具与更新数据...")
     run("git checkout upstream/main -- book docs tools updates.json selfcheck.html index.html README.md")
 
-    # 4. 注入配置与重新统计
-    patch_files()
+    # 4. 执行去广告、修配置与 Claude Code UI 重塑
+    patch_and_restyle()
+
+    # 5. 执行全书统计与校验 (sync-stats)
     print("[*] 正在执行全书统计与校验 (sync-stats)...")
     run("node tools/sync-stats.mjs")
 
-    # 5. 检查本地是否有待提交或推送文件
+    # 6. 检查本地是否有待提交或推送文件
     status = run("git status --porcelain").stdout.strip()
     ahead = run("git rev-list origin/main..HEAD --count").stdout.strip()
     
@@ -93,7 +94,7 @@ def main():
         if status:
             print("[*] 发现变动文件，正在提交至本地 Git...")
             run("git add .")
-            run('git commit -m "feat: sync latest upstream advice (767 items) and tools"')
+            run('git commit -m "feat: sync latest upstream content with Claude Code theme and no-ad patch"')
         print("[*] 正在推送至 GitHub 仓库 (origin main)...")
         run("git push origin main")
         print("=" * 60)
