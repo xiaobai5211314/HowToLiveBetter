@@ -2,7 +2,8 @@
 """对已部署的高性价比人生指南站点做三类改动：
 1) 去掉广告、赞赏码、原作者 GA 统计；
 2) 站内 GitHub 导航链接改指自己的 fork，域名元数据改指自己的域名；
-3) README.md 尾部推广段落（Star 走势 / 赞赏 / 广告位 / 商务合作）删除。
+3) README.md 尾部推广段落（Star 走势 / 赞赏 / 广告位 / 商务合作）删除；
+4) 导航栏与侧栏增加指向《人情世故指南》的双向友链。
 每个替换都断言命中次数，全部通过才落盘。用法：python patch_site.py <站点根目录>
 """
 import sys, os
@@ -14,13 +15,19 @@ SITE = 'https://rensheng.21212121.xyz'
 
 def cut(s, start, end):
     """删除 start（含）到 end（含）之间的片段。"""
+    if start not in s:
+        return s
     i = s.index(start)
+    if end not in s[i:]:
+        return s
     j = s.index(end, i) + len(end)
     return s[:i] + s[j:]
 
 def rep(s, old, new, expect=1):
     n = s.count(old)
     if n == 0 and new in s:
+        return s
+    if n != expect and new in s:
         return s
     assert n == expect, 'expected %d, found %d: %r' % (expect, n, old[:70])
     return s.replace(old, new)
@@ -35,10 +42,14 @@ out = {}
 s = load('index.html')
 
 # 1) GA 统计脚本：保留离线构建的剥离标记（tools/offline/build.mjs 依赖），去掉脚本本体
-i = s.index('<!-- ga:start')
-j = s.index('\n', i) + 1
-k = s.index('<!-- ga:end -->')
-s = s[:j] + s[k:]
+if '<!-- ga:start' in s and '<!-- ga:end -->' in s:
+    i = s.index('<!-- ga:start')
+    j = s.index('\n', i) + 1
+    k = s.index('<!-- ga:end -->')
+    if j < k:
+        between = s[j:k].strip()
+        if between:
+            s = s[:j] + s[k:]
 
 # 2) 广告/赞赏 CSS（含两条注释）
 s = cut(s, '/* 侧栏底部广告位', '#tip-box button:hover{color:var(--t1);background:var(--bg-mute)}\n')
@@ -79,16 +90,36 @@ s = rep(s, ORIG, FORK, expect=15)
 s = rep(s,
         '正文按 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans">CC BY 4.0</a> 发布，转载改编请署名并附原文链接。',
         '正文原作《高性价比人生指南》（原作者 <a href="%s">eternity4719</a>），按 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans">CC BY 4.0</a> 授权；本站在原作基础上删改。' % ORIG)
+
+# 10) 友链：导航栏与侧栏互指《人情世故指南》
+if '.special-link' not in s:
+    s = rep(s,
+            '.nav-r{display:flex;align-items:center;gap:8px}',
+            '.nav-r{display:flex;align-items:center;gap:8px}\n'
+            '.special-link{display:inline-flex;align-items:center;color:var(--brand-1);font-weight:600;font-size:13.5px;text-decoration:none;padding:5px 9px;border-radius:6px;transition:all .2s;white-space:nowrap;margin-right:2px}\n'
+            '.special-link:hover{background:var(--bg-mute);color:var(--brand-2);text-decoration:none}\n'
+            '@media (max-width:640px){.special-link{display:none}}')
+
+    s = rep(s,
+            '    <div class="nav-r">\n      <a class="icon-btn" href="README.md"',
+            '    <div class="nav-r">\n      <a class="special-link" href="https://renqing.21212121.xyz/" target="_blank" rel="noopener" title="访问《人情世故指南》">人情世故 ↗</a>\n      <a class="icon-btn" href="README.md"')
+
+    s = rep(s,
+            '    <p>正文与标签来自仓库 <a href="%s/tree/main/book">book/</a> 下的 34 个文件，改正文即改这里。</p>\n  </div>' % FORK,
+            '    <p>正文与标签来自仓库 <a href="%s/tree/main/book">book/</a> 下的 34 个文件，改正文即改这里。</p>\n    <p style="margin-top:10px;padding-top:8px;border-top:1px dashed var(--divider)">🤝 <b>友链：</b><a href="https://renqing.21212121.xyz/" target="_blank" rel="noopener">人情世故指南 ↗</a></p>\n  </div>' % FORK)
+
 assert 'mcyyy' not in s and 'gtag' not in s and 'googletagmanager' not in s
 assert 'eternity4719.github.io' not in s and 'tip-mask' not in s and 'reportSearch' not in s
+assert 'renqing.21212121.xyz' in s
 out['index.html'] = s
 
 # ---------------- README.md ----------------
 s = load('README.md')
 
 # 尾部推广段整体删除：## Star 走势 / ## 赞赏 / ## 广告位 / ## 商务合作
-idx = s.index('\n## Star 走势')
-s = s[:idx] + '\n'
+if '\n## Star 走势' in s:
+    idx = s.index('\n## Star 走势')
+    s = s[:idx] + '\n'
 
 # 许可段的原文链接按 CC BY 协议保留指向原作；其余仓库链接（含 release 下载）指向自己的 fork
 s = rep(s, '附上仓库链接 ' + ORIG + ' 。', '附上仓库链接 __ATTRURL__ 。', expect=1)
@@ -99,8 +130,6 @@ assert 'mcyyy' not in s and 'star-history' not in s and '赞赏' not in s
 out['README.md'] = s
 
 # ---------------- selfcheck.html（生活自查页）----------------
-# 该页为纯静态交互页，原仓库本身不含广告/统计；此处只做校验，
-# 上游若日后加入广告或 GA 会在此熔断，需要人工补脱敏规则。
 s = load('selfcheck.html')
 s = s.replace('https://eternity4719.github.io/HowToLiveBetter', SITE)
 s = s.replace(ORIG, FORK)

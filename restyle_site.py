@@ -12,6 +12,8 @@ with open(path, encoding='utf-8') as f:
 
 def rep(s, old, new, expect=1):
     n = s.count(old)
+    if n == 0 and new in s:
+        return s
     assert n == expect, 'expected %d, found %d: %r' % (expect, n, old[:70])
     return s.replace(old, new)
 
@@ -42,8 +44,9 @@ s = rep(s, """  --bg:#ffffff; --bg-alt:#f6f6f7; --bg-soft:#f6f6f7; --bg-mute:#f1
   --shadow:0 1px 2px rgba(40,35,25,.05),0 4px 24px rgba(40,35,25,.06);""")
 
 # 3) 加衬线字体变量
-s = rep(s, '  --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;',
-        '  --font-serif:"Noto Serif SC","Source Han Serif SC","Songti SC",Georgia,"Times New Roman",serif;\n  --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;')
+if '--font-serif:' not in s:
+    s = rep(s, '  --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;',
+            '  --font-serif:"Noto Serif SC","Source Han Serif SC","Songti SC",Georgia,"Times New Roman",serif;\n  --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;')
 
 # 4) 深色令牌：冷黑 -> 暖黑
 s = rep(s, """  --bg:#1b1b1f; --bg-alt:#161618; --bg-soft:#202127; --bg-mute:#2b2b2f; --bg-elv:#202127;
