@@ -180,3 +180,14 @@ README 开头「这本书想回答的问题」表**一节只占一行**（2026-0
     - 改 README 目录行和 AGENTS.md 目录简介；新增 docs 长文的话挂四处链接。
     - 跑 `sync-stats.mjs`，按功能分组提交。
   - 场景清单这类只指路的长文，子代理不用上网，只读 book/，但同样要逐条核「写到的数字在被指的条目里都有」。
+
+## 独立站点定制与自动化部署约定
+- **设计语言规范 (Claude Code UI)**：
+  - 本站视觉完全采用 Claude Code 官方风格（暖羊皮纸背景 `#f5f4ed` + 陶土橙强调色 `#c96442` + 衬线大标题 Noto Serif SC）。
+  - 通过 `restyle_site.py` 对 `index.html` 与 `selfcheck.html` 实施自动化样式注入，严禁退回上游默认冷蓝白主题。
+- **100% 纯净无广告规范**：
+  - 通过 `patch_site.py` 彻底剔除上游所有的广告位 (`mcyyy`)、赞赏/喝咖啡弹窗 (`tip-mask`)、Google Analytics 追踪脚本与推广模块。
+  - 自动绑定独立域名 `https://rensheng.21212121.xyz/` 与个人 Fork 仓库。
+- **自动化同步工具**：
+  - 运行 `python tools/sync_upstream.py` 时，会自动串联：拉取最新上游内容 → `patch_site.py` 去广告 → `restyle_site.py` 注入 Claude Code 主题 → `sync-stats.mjs` 重新统计 → Git 提交推送。
+  - GitHub Actions 定时流水线（每天中午 12:00）亦自动复用此链路，确保每次更新既同步了上游最新知识库，又始终保持纯净无广告与 Claude Code 雅致界面。
